@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "breathe-rpg.sln"
+    "dotnet.defaultSolution": "breathe.sln"
 }
