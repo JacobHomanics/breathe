@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 690302bb5d7fe384d9ce6213e5b46e0b
+timeCreated: 1613081715
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Prop_Dwarf_Cart_03_Convex.asset
+  uploadId: 718590

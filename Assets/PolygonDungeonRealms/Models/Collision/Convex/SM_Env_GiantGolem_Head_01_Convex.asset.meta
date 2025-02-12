@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a12676d5d5a4b90499a6b50ac6c472a2
+timeCreated: 1613083710
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Env_GiantGolem_Head_01_Convex.asset
+  uploadId: 718590

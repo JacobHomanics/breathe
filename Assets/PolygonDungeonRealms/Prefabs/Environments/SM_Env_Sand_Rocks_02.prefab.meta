@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6964e0ea9513ddc4e84ad247d2ee3fcd
+timeCreated: 1606780528
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Sand_Rocks_02.prefab
+  uploadId: 718590

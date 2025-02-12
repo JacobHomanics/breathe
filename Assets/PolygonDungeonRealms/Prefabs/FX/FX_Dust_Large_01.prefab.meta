@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ebb3626bfefa45a40bf1a3d5a33ae042
+timeCreated: 1611190583
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/FX/FX_Dust_Large_01.prefab
+  uploadId: 718590

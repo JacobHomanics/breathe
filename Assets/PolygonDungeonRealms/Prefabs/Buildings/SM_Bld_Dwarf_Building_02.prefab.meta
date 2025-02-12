@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 256ad2e22fbe2c640a0a7b8fff4519d8
+timeCreated: 1607299401
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Buildings/SM_Bld_Dwarf_Building_02.prefab
+  uploadId: 718590

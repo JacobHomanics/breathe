@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 899b963fc9982334da61b5d9484e82bf
+timeCreated: 1604461730
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_03_A.mat
+  uploadId: 718590

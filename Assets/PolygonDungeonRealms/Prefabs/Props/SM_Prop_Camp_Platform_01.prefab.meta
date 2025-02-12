@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 302ca8a3913b0b24eba3531e02c7c1d9
+timeCreated: 1607562963
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Props/SM_Prop_Camp_Platform_01.prefab
+  uploadId: 718590

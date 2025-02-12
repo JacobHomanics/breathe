@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 4712399330bf329429d1253df6ecae1c
+timeCreated: 1613349522
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Env_Hell_Bone_Skull_01_Convex
+    3.asset
+  uploadId: 718590

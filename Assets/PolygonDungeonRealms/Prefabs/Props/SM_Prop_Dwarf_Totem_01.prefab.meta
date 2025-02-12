@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5b04f34dcc8ce7248ae0d379b4881eb3
+timeCreated: 1610490539
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Props/SM_Prop_Dwarf_Totem_01.prefab
+  uploadId: 718590

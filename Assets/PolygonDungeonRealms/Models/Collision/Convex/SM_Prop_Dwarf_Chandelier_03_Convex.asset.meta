@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2b1de1cc80dbb5841890799d7b640e62
+timeCreated: 1613081711
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Prop_Dwarf_Chandelier_03_Convex.asset
+  uploadId: 718590

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 86bfa633422f09f48a12b9ef5ece6009
+timeCreated: 1613083903
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Env_Bone_Rib_05_Convex.asset
+  uploadId: 718590

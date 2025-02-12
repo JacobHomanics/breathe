@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c42dd32ca0e5a8e43bf986fe5a9d19b0
+timeCreated: 1604461847
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Hell_Ground_02.prefab
+  uploadId: 718590

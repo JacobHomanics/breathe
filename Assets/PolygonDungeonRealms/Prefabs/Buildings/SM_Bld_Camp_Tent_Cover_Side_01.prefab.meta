@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 01dda4e2349154e46b4aad0f51cb268a
+timeCreated: 1604461845
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Buildings/SM_Bld_Camp_Tent_Cover_Side_01.prefab
+  uploadId: 718590

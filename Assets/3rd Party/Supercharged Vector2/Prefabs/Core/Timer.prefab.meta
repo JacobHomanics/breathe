@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b3976bbac7c0f40fabfa2997ff6f9cc3
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305553
+  packageName: Supercharged Vector2
+  packageVersion: 1.0
+  assetPath: Assets/Supercharged Vector2/Prefabs/Core/Timer.prefab
+  uploadId: 722836

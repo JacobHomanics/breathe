@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d6a60ef0775d0934399a301cd842c8aa
+timeCreated: 1613081687
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Prop_Camp_Wood_Pole_01_Convex.asset
+  uploadId: 718590

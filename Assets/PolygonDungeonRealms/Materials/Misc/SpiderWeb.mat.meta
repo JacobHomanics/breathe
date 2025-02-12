@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4776dae064b9f574ea7d2d25294d2a1b
+timeCreated: 1607649668
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Materials/Misc/SpiderWeb.mat
+  uploadId: 718590

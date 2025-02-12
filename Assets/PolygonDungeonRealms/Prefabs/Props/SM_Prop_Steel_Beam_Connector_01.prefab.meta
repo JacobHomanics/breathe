@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 82f0126fc569c0642905236287d17e4d
+timeCreated: 1606789417
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Props/SM_Prop_Steel_Beam_Connector_01.prefab
+  uploadId: 718590

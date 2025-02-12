@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 988ffdd5d99e0ae40b402f24df6c5eb0
+timeCreated: 1606767430
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Props/SM_Prop_Dwarf_Chandelier_03.prefab
+  uploadId: 718590

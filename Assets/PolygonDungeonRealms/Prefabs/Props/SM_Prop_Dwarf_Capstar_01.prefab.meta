@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d083879301bb7c34c9ff0d666076389d
+timeCreated: 1611535368
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Props/SM_Prop_Dwarf_Capstar_01.prefab
+  uploadId: 718590

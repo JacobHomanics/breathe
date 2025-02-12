@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4cae3c44a40c2de45aa79789db7a0022
+timeCreated: 1611195480
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Props/SM_Prop_Crystal_Rock_A_03.prefab
+  uploadId: 718590

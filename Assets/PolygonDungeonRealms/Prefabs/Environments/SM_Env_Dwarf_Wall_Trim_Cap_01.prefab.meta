@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e45e6fafc3ae632498b525c6561ea678
+timeCreated: 1605755448
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Dwarf_Wall_Trim_Cap_01.prefab
+  uploadId: 718590

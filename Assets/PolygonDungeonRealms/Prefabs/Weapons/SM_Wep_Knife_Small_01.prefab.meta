@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: cbbb3e1aa2223464fb4cd7eff81416ca
+timeCreated: 1606271857
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Weapons/SM_Wep_Knife_Small_01.prefab
+  uploadId: 718590

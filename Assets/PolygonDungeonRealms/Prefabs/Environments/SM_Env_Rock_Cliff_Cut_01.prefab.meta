@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 67aa9b0e38d2db84494b5414a9024095
+timeCreated: 1605236697
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Rock_Cliff_Cut_01.prefab
+  uploadId: 718590

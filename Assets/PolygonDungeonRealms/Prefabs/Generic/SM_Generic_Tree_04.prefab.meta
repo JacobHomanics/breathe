@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 236ed6b91a811854987e1f0fb90bd3ac
+timeCreated: 1605215006
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Generic/SM_Generic_Tree_04.prefab
+  uploadId: 718590

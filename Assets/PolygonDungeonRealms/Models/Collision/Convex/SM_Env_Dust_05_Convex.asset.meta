@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 925f6da72fa4ed94e9612ed4ecb2a66c
+timeCreated: 1613083722
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Env_Dust_05_Convex.asset
+  uploadId: 718590

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 06f7e99f2497822458031deb670f1241
+timeCreated: 1611633358
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Dwarf_Lava_Duct_01_End_03.prefab
+  uploadId: 718590

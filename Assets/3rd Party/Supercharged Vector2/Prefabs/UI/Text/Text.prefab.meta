@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 665ac6864b73c499c85b807e0c86d4ec
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305553
+  packageName: Supercharged Vector2
+  packageVersion: 1.0
+  assetPath: Assets/Supercharged Vector2/Prefabs/UI/Text/Text.prefab
+  uploadId: 722836

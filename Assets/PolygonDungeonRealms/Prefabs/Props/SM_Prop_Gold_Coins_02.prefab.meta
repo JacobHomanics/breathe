@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6243ead05e503ba468b5f1a27cd9d905
+timeCreated: 1611266801
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Props/SM_Prop_Gold_Coins_02.prefab
+  uploadId: 718590

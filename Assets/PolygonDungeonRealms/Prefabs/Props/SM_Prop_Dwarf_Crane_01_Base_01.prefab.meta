@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 40aafb96c7a2c924899f1c3a070e3962
+timeCreated: 1610934442
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Props/SM_Prop_Dwarf_Crane_01_Base_01.prefab
+  uploadId: 718590

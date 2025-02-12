@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1048b0c60481648a79874a0239796d1b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305553
+  packageName: Supercharged Vector2
+  packageVersion: 1.0
+  assetPath: Assets/Supercharged Vector2/Prefabs/UI/Slider/Slider.prefab
+  uploadId: 722836

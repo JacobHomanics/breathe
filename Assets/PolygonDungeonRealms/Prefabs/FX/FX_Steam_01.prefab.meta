@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e60f79d92eb08f742a87aaf1f2fba606
+timeCreated: 1611635050
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/FX/FX_Steam_01.prefab
+  uploadId: 718590

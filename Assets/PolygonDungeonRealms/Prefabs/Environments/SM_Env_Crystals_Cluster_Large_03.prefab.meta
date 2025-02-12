@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b2f83ac58e9a78c419d2418cd7162312
+timeCreated: 1611203107
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Crystals_Cluster_Large_03.prefab
+  uploadId: 718590

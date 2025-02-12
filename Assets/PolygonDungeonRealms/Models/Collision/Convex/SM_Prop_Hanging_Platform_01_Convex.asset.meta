@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 64fefd5a8bd57e749b27ba7eedce2528
+timeCreated: 1613081680
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Prop_Hanging_Platform_01_Convex.asset
+  uploadId: 718590

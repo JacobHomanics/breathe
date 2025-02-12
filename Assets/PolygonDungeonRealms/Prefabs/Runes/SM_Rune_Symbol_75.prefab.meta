@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c09d89ecf53017247914e5209ad0d470
+timeCreated: 1604875889
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Runes/SM_Rune_Symbol_75.prefab
+  uploadId: 718590

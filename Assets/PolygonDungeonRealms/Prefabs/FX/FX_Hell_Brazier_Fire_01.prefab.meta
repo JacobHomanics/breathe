@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 68b9ca83f6a52fd429c470306bce5916
+timeCreated: 1607386916
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/FX/FX_Hell_Brazier_Fire_01.prefab
+  uploadId: 718590

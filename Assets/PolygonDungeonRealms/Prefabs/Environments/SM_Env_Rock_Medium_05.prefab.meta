@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6ba104f97c32d5047ba032874347fc4a
+timeCreated: 1604461842
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Rock_Medium_05.prefab
+  uploadId: 718590

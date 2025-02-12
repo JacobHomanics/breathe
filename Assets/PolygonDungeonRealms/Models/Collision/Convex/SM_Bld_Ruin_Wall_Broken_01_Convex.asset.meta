@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7d00b7c2be851e14b930a5e8386e4391
+timeCreated: 1613088394
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Bld_Ruin_Wall_Broken_01_Convex.asset
+  uploadId: 718590

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fd2837d8e4114df4ab65135c06bdd8e2
+timeCreated: 1611784906
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Props/SM_Prop_DeadBody_Dwarf_01.prefab
+  uploadId: 718590

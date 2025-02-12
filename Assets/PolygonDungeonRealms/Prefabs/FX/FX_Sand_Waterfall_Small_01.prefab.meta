@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b169d051e8e7d154f811e6dfe9d0967f
+timeCreated: 1606943638
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/FX/FX_Sand_Waterfall_Small_01.prefab
+  uploadId: 718590

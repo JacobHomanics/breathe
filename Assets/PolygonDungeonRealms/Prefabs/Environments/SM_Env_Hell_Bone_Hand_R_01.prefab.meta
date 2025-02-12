@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e28c21f05c6bd6540b5423d8a14ea570
+timeCreated: 1604461843
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Hell_Bone_Hand_R_01.prefab
+  uploadId: 718590

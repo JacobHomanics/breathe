@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e5319ecff0f1f4f4fa20a7ce1ae22500
+timeCreated: 1613083991
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Env_Rubble_Tile_01_Convex.asset
+  uploadId: 718590

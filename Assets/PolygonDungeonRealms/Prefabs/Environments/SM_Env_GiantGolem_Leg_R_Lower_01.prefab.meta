@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b351b207078f33147aec95822b4a531a
+timeCreated: 1605063501
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_GiantGolem_Leg_R_Lower_01.prefab
+  uploadId: 718590

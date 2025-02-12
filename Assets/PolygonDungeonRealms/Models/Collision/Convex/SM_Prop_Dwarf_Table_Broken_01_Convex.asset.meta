@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d08b5f8bd08573c4e86baa11692735f8
+timeCreated: 1613081925
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Prop_Dwarf_Table_Broken_01_Convex.asset
+  uploadId: 718590

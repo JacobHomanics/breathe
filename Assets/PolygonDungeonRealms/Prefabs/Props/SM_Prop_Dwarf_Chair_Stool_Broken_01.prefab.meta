@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d2b09cb1185855645b32334edbf79b09
+timeCreated: 1611622211
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Props/SM_Prop_Dwarf_Chair_Stool_Broken_01.prefab
+  uploadId: 718590

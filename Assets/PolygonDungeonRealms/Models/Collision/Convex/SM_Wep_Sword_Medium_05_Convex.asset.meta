@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d02ab138552a18749963be75da5222fe
+timeCreated: 1613082378
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Wep_Sword_Medium_05_Convex.asset
+  uploadId: 718590

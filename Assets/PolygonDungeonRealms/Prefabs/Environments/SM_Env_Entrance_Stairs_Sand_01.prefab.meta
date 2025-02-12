@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 85c82bae78a0bc245bfb5cd9706bab13
+timeCreated: 1605069021
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Entrance_Stairs_Sand_01.prefab
+  uploadId: 718590

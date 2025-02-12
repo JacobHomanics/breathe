@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f5f94dd8b4d56f4458d4511cca4fafce
+timeCreated: 1605745449
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Dwarf_Floor_Round_01.prefab
+  uploadId: 718590

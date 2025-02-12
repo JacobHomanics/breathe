@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: c185fa45f3f960d43bcc2243c94b1fbf
+timeCreated: 1613340477
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Env_GiantGolem_Chest_01_Convex
+    1.asset
+  uploadId: 718590

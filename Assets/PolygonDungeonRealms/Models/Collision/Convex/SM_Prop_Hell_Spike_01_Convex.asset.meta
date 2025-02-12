@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 10dde3ddca5da7b4e9aec2b2c4b3606a
+timeCreated: 1613081752
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Prop_Hell_Spike_01_Convex.asset
+  uploadId: 718590

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a6877e2938accf8479c8ea2e64f33b4c
+timeCreated: 1611630002
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Characters/Attachments/SM_Chr_Attach_Hat_Round_02.prefab
+  uploadId: 718590

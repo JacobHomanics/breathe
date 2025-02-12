@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8253782e41d1a6d4ba4b07cac84b60e8
+timeCreated: 1611804876
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Statue_Broken_05.prefab
+  uploadId: 718590

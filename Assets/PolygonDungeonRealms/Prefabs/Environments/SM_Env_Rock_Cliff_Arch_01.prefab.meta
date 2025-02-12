@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 173dfe0816ded8d43836ae395247a525
+timeCreated: 1606694738
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Rock_Cliff_Arch_01.prefab
+  uploadId: 718590

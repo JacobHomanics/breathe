@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1289bcb198de0fa448febf7fcc1d9161
+timeCreated: 1613084028
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Env_Dwarf_Pillar_Half_01_Convex.asset
+  uploadId: 718590

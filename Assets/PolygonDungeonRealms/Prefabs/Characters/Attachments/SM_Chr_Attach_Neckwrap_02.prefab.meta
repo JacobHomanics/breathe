@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4e42a2f56f83ecf48a56408d0f500e49
+timeCreated: 1611630005
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Characters/Attachments/SM_Chr_Attach_Neckwrap_02.prefab
+  uploadId: 718590

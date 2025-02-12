@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ff32254837b58de4db525f5a254c9c85
+timeCreated: 1613081802
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Prop_Dwarf_Weapon_Rack_04_Convex.asset
+  uploadId: 718590

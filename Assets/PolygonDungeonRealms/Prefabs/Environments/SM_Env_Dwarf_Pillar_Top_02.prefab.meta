@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 88a31ff511917dd4b88442992f85ee59
+timeCreated: 1605492993
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Dwarf_Pillar_Top_02.prefab
+  uploadId: 718590

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4bd57d5d8cb318f4d8b221923c886bab
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305914
+  packageName: Callbacks
+  packageVersion: 1.0
+  assetPath: Assets/Callbacks/Scripts/StartCallback.cs
+  uploadId: 725222

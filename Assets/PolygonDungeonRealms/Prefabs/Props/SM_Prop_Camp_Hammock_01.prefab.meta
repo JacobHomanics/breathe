@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a17ce3f802ffcc540a247eabe7b0029f
+timeCreated: 1606710390
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Props/SM_Prop_Camp_Hammock_01.prefab
+  uploadId: 718590

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c019f103b6f942a4eb241ad17009d1f0
+timeCreated: 1604461843
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Hell_Bone_Skull_01.prefab
+  uploadId: 718590

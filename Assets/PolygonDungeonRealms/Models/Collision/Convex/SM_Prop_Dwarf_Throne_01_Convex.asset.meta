@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e82a54906bd165c4e83f88ee49cd6e1f
+timeCreated: 1613081685
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Prop_Dwarf_Throne_01_Convex.asset
+  uploadId: 718590

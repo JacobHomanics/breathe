@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 30f2ee1f6338c464bbbd30981b3da3f4
+timeCreated: 1611199928
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Characters/Chr_Nomad_Male_02.prefab
+  uploadId: 718590

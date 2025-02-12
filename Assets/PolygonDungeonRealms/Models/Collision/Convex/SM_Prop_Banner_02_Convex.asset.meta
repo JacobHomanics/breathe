@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 43b76e9218a17d448b2b2539e9750c35
+timeCreated: 1613081910
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Prop_Banner_02_Convex.asset
+  uploadId: 718590

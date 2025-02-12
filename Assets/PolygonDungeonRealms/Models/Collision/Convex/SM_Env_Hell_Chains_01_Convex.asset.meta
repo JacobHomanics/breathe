@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 63db16d1934a41647ada45cf96f3127b
+timeCreated: 1613083834
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Env_Hell_Chains_01_Convex.asset
+  uploadId: 718590

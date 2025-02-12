@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 326f89f761cef8a40b3f7aa5854d9d45
+timeCreated: 1613081658
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Prop_Barrel_Shelf_Small_Broken_02_Convex.asset
+  uploadId: 718590

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fd47985f31e85e443bc8493d440bb879
+timeCreated: 1613081708
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Prop_Rug_07_Convex.asset
+  uploadId: 718590

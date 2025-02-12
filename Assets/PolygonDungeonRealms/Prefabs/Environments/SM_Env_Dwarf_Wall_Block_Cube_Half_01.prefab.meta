@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 654dfe77fc63dde48a2a3566f8382a9c
+timeCreated: 1604981380
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Dwarf_Wall_Block_Cube_Half_01.prefab
+  uploadId: 718590

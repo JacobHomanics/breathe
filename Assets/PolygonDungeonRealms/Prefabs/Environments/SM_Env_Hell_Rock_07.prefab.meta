@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ccf49ee4d3b3f0a438c2e2ec0e89845b
+timeCreated: 1607388516
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Hell_Rock_07.prefab
+  uploadId: 718590

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 59adc97482d01e6408b3f38f078358a9
+timeCreated: 1604981396
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Dwarf_Wall_Alcove_Angular_01.prefab
+  uploadId: 718590

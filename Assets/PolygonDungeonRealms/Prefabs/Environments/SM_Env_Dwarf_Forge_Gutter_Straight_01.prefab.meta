@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: cdbf9080c61ca9146a2288c5b3f83a87
+timeCreated: 1610932869
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Dwarf_Forge_Gutter_Straight_01.prefab
+  uploadId: 718590

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cf5a5e980cfcd4e1b88b6de53c4756c6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305553
+  packageName: Supercharged Vector2
+  packageVersion: 1.0
+  assetPath: Assets/Supercharged Vector2/Prefabs/UI/Text/TMPText.prefab
+  uploadId: 722836

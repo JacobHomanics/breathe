@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 82e6e7d95cd14b24aabf1d5080e0217e
+timeCreated: 1606438565
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Props/SM_Prop_Barrel_Plug_01.prefab
+  uploadId: 718590

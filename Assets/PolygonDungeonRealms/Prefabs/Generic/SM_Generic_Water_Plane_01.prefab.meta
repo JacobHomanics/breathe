@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9c77f54226f28184c9d4de2d5f0f7153
+timeCreated: 1605215008
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Generic/SM_Generic_Water_Plane_01.prefab
+  uploadId: 718590

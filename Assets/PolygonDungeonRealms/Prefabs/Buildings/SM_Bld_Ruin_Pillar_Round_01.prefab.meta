@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 70c36c4adc1ac9849998aac621053468
+timeCreated: 1605043429
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Buildings/SM_Bld_Ruin_Pillar_Round_01.prefab
+  uploadId: 718590

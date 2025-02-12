@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2c093bd0fa17e754eb5fba001b24bc74
+timeCreated: 1611697172
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Props/SM_Prop_Caliper_01.prefab
+  uploadId: 718590

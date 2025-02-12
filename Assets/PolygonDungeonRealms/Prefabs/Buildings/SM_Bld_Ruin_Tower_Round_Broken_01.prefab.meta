@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f634f65ac7090b044852afe88193e876
+timeCreated: 1604896060
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Buildings/SM_Bld_Ruin_Tower_Round_Broken_01.prefab
+  uploadId: 718590

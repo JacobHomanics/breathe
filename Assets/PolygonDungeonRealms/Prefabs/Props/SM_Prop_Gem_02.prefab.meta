@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9e5cdc9faa50c5d4b81aa8c55c931cae
+timeCreated: 1606794778
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Props/SM_Prop_Gem_02.prefab
+  uploadId: 718590

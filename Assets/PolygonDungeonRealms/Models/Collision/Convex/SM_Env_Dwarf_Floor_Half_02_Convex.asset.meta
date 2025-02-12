@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4f621cd9b811e6c44a27fbd19d6e97f7
+timeCreated: 1613083937
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Env_Dwarf_Floor_Half_02_Convex.asset
+  uploadId: 718590

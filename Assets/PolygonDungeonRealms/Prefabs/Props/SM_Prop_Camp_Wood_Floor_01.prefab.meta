@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 19d2ccbfdaec8a24aadbbd0a49c045b1
+timeCreated: 1604461863
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Props/SM_Prop_Camp_Wood_Floor_01.prefab
+  uploadId: 718590

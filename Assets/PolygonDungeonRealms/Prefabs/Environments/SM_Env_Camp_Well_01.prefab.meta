@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: cfc9573ae38fc79419a8512559402ff4
+timeCreated: 1606710392
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Camp_Well_01.prefab
+  uploadId: 718590

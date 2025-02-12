@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7ef04123467336e498de166e42abd986
+timeCreated: 1606793848
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Sand_Waterfall_Ground_01.prefab
+  uploadId: 718590

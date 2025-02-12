@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7369fcb5c68dca14a802cfd090fb71a3
+timeCreated: 1613088402
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Bld_Ruin_Tiles_01_Convex.asset
+  uploadId: 718590

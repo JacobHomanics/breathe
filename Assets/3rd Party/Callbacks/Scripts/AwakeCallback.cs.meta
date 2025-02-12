@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 24c8f285deb99478aafafd5e3964ee7a
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305914
+  packageName: Callbacks
+  packageVersion: 1.0
+  assetPath: Assets/Callbacks/Scripts/AwakeCallback.cs
+  uploadId: 725222

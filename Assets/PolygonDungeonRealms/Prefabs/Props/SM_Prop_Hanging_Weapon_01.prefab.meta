@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c4dd0ef828596aa438a3333f8210643d
+timeCreated: 1606271801
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Props/SM_Prop_Hanging_Weapon_01.prefab
+  uploadId: 718590

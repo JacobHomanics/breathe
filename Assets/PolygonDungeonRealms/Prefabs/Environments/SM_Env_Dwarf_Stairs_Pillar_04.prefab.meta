@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5777970cb1da87b4aa20e2369f517957
+timeCreated: 1605152422
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Dwarf_Stairs_Pillar_04.prefab
+  uploadId: 718590

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d5e26686b9c5f85499a0ccf3e11bb318
+timeCreated: 1613081891
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Prop_Tech_Liquid_01_Convex.asset
+  uploadId: 718590

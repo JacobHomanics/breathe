@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 04f40a51ac169ee4da4407d62433602b
+timeCreated: 1611718663
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Props/SM_Prop_Gold_Pile_Large_03.prefab
+  uploadId: 718590

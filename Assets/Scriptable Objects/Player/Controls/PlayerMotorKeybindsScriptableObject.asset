@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7bba37c439af4022abf0c8ff510e987, type: 3}
+  m_Name: PlayerMotorKeybindsScriptableObject
+  m_EditorClassIdentifier: 
+  fowardCombos:
+  - keyCodes: 77000000
+    mouseButtons: 
+  - keyCodes: 
+    mouseButtons: 0000000001000000
+  - keyCodes: 11010000
+    mouseButtons: 
+  backwardCombos:
+  - keyCodes: 73000000
+    mouseButtons: 
+  - keyCodes: 12010000
+    mouseButtons: 
+  leftCombos:
+  - keyCodes: 71000000
+    mouseButtons: 
+  rightCombos:
+  - keyCodes: 65000000
+    mouseButtons: 
+  jumpCombos:
+  - keyCodes: 20000000
+    mouseButtons: 

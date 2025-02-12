@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4a2ef780cc4b5d447a9afeae330c8109
+timeCreated: 1604875895
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Runes/SM_Rune_Synty_03.prefab
+  uploadId: 718590

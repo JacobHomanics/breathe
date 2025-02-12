@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 682672655638c0245bdf375c282a4770
+timeCreated: 1613083843
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Env_Rock_Round_04_Convex.asset
+  uploadId: 718590

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: adf2a4f5d7c004b4094315df6bc5b19b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305553
+  packageName: Supercharged Vector2
+  packageVersion: 1.0
+  assetPath: Assets/Supercharged Vector2/Prefabs/Core/Timer - Looped.prefab
+  uploadId: 722836

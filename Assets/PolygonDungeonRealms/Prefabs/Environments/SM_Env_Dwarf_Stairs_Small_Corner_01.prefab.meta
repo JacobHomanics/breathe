@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 684c1e83540b26844b630809a65e7704
+timeCreated: 1604981376
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Dwarf_Stairs_Small_Corner_01.prefab
+  uploadId: 718590

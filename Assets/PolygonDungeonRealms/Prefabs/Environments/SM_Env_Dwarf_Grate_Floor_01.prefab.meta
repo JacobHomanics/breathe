@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d13665dd332c8094a9ae2b7b3c400851
+timeCreated: 1606439065
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Dwarf_Grate_Floor_01.prefab
+  uploadId: 718590

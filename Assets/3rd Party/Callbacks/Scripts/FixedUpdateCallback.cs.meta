@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4a347c19391621840bf455798fd214a2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305914
+  packageName: Callbacks
+  packageVersion: 1.0
+  assetPath: Assets/Callbacks/Scripts/FixedUpdateCallback.cs
+  uploadId: 725222

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: df6c0427d2e2dad4ba5d621b1f02dc61
+timeCreated: 1613082331
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Wep_Axe_Small_02_Convex.asset
+  uploadId: 718590

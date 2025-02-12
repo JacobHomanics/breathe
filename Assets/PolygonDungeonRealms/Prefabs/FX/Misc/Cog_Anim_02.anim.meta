@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fed1097568cf89649bfd00c8c2802f6e
+timeCreated: 1611712473
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/FX/Misc/Cog_Anim_02.anim
+  uploadId: 718590

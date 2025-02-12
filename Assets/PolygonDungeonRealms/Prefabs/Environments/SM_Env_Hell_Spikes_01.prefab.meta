@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b3ea28ad9ce04ee4182d26e1605c674d
+timeCreated: 1604461847
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Environments/SM_Env_Hell_Spikes_01.prefab
+  uploadId: 718590

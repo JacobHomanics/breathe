@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ff0cc502202c1704cb820a74e9bd3c42
+timeCreated: 1613081879
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Models/Collision/Convex/SM_Prop_Scroll_01_Convex.asset
+  uploadId: 718590

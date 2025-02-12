@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5764ff78f190b9945baf5370ed4f6b32
+timeCreated: 1606271859
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189093
+  packageName: POLYGON Dungeon Realms - Low Poly 3D Art by Synty
+  packageVersion: 1.3.3
+  assetPath: Assets/PolygonDungeonRealms/Prefabs/Weapons/SM_Wep_Sword_Small_06.prefab
+  uploadId: 718590
