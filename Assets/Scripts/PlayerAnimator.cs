@@ -5,12 +5,14 @@ public class PlayerAnimator : MonoBehaviour
     public Animator anim;
     public PlayerMotor controller;
 
-    public float damping = 0.5f;
+    public float damping = 0.05f;
 
     public void Jump()
     {
-        anim.SetTrigger("Jump");
+        // anim.SetTrigger("Jump");
+        anim.Play("Jump", 1, 0f);
     }
+
 
     void Update()
     {
