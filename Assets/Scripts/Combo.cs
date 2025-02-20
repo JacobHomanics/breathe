@@ -6,21 +6,24 @@ public class Combo
     public KeyCode[] keyCodes;
     public int[] mouseButtons;
 
-    public static bool Resolve(Combo combo)
+    public bool IsResolved
     {
-        bool isValid = true;
-
-        for (int i = 0; i < combo.keyCodes.Length; i++)
+        get
         {
-            isValid &= Input.GetKey(combo.keyCodes[i]);
-        }
+            bool isValid = true;
 
-        for (int i = 0; i < combo.mouseButtons.Length; i++)
-        {
-            isValid &= Input.GetMouseButton(combo.mouseButtons[i]);
-        }
+            for (int i = 0; i < keyCodes.Length; i++)
+            {
+                isValid &= Input.GetKey(keyCodes[i]);
+            }
 
-        return isValid;
+            for (int i = 0; i < mouseButtons.Length; i++)
+            {
+                isValid &= Input.GetMouseButton(mouseButtons[i]);
+            }
+
+            return isValid;
+        }
     }
 
     public static int GetResolveCount(Combo[] combos)
@@ -29,7 +32,7 @@ public class Combo
 
         for (int i = 0; i < combos.Length; i++)
         {
-            if (Resolve(combos[i]))
+            if (combos[i].IsResolved)
                 count++;
         }
 

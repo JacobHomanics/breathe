@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912918bdbfeed4f57b3f8ff3bcb5a18f, type: 3}
   m_Name: Offset Drag - User Settings
   m_EditorClassIdentifier: 
+  invertXAxis: 0
   invertYAxis: 1
+  xAxis: Mouse X
+  yAxis: Mouse Y
   sensitivities: {x: 1000, y: 1000}
+  defaultEulerAngles: {x: 35, y: 0, z: 0}
+  defaultSpeed: 5

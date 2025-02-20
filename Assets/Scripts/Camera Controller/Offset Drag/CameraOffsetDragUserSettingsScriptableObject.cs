@@ -10,4 +10,10 @@ public class CameraOffsetDragUserSettingsScriptableObject : ScriptableObject
     public string yAxis = "Mouse Y";
 
     public Vector2 sensitivities;
+
+    public Vector3 defaultEulerAngles = new(35f, 0f, 0f);
+    public float defaultSpeed = 1f;
+
+    public Combo combo;
+
 }
