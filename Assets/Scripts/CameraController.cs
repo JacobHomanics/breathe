@@ -17,19 +17,25 @@ public class CameraController : MonoBehaviour
 
     void LateUpdate()
     {
-        Calculate(target);
+        Calculate();
     }
 
-    private void Calculate(Transform target)
+    public CameraControllerComponent[] components;
+
+    private void Calculate()
     {
         Vector3 targetPosition = Vector3.zero;
-        targetPosition = HandleZoom(targetPosition);
-        targetPosition = HandleBob(targetPosition, userSettings.periods, userSettings.amplitudes);
-        targetPosition = cam.InverseTransformPoint(HandleObstacleCollision(cam.TransformPoint(targetPosition), target.position));
+
+        for (int i = 0; i < components.Length; i++)
+        {
+            targetPosition = components[i].Calculate(targetPosition);
+        }
+
+        // targetPosition = HandleZoom(targetPosition);
+        // targetPosition = HandleBob(targetPosition, userSettings.periods, userSettings.amplitudes);
+        // targetPosition = cam.InverseTransformPoint(HandleObstacleCollision(cam.TransformPoint(targetPosition), target.position));
         cam.localPosition = Vector3.Lerp(cam.localPosition, targetPosition, Time.deltaTime * userSettings.smoothing);
     }
-
-
 
     private Vector3 HandleBob(Vector3 position, Vector3 periods, Vector3 amplitudes)
     {

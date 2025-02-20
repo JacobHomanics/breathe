@@ -132,6 +132,9 @@ GameObject:
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
   - component: {fileID: 330585548}
+  - component: {fileID: 330585551}
+  - component: {fileID: 330585550}
+  - component: {fileID: 330585549}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -273,6 +276,52 @@ MonoBehaviour:
   target: {fileID: 1341081479}
   systemSettings: {fileID: 11400000, guid: 243e2dfb084294e268825d69ca70d599, type: 2}
   userSettings: {fileID: 11400000, guid: ddee58900d71d48b0bc3faf9e2cc7123, type: 2}
+  components:
+  - {fileID: 330585549}
+  - {fileID: 330585551}
+  - {fileID: 330585550}
+--- !u!114 &330585549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e55736b33248462084f9c1fb24abbda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userSettings: {fileID: 11400000, guid: ef72145c933e8497d9c0d045b7f78416, type: 2}
+  systemSettings: {fileID: 11400000, guid: 6d6cfffb622da4ecfaaf65d1472b7be9, type: 2}
+--- !u!114 &330585550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa1c560cace04e4f8514981a82b3ccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 330585546}
+  target: {fileID: 1341081479}
+  systemSettings: {fileID: 11400000, guid: fe8eb01b6713946fa8665c363c9931d0, type: 2}
+--- !u!114 &330585551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b6daf7355a4d4d0da02a0747fb8bfe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userSettings: {fileID: 11400000, guid: 34ff5712ed9fd41a4b4111cb3a350748, type: 2}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
