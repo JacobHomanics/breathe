@@ -4,9 +4,4 @@ using UnityEngine;
 public class CameraControllerUserSettingsScriptableObject : ScriptableObject
 {
     public float smoothing = 1f;
-    public bool invertYAxis;
-
-    public Vector2 sensitivities;
-
-
 }

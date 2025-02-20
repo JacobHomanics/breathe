@@ -273,8 +273,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 330585546}
-  target: {fileID: 1341081479}
-  systemSettings: {fileID: 11400000, guid: 243e2dfb084294e268825d69ca70d599, type: 2}
   userSettings: {fileID: 11400000, guid: ddee58900d71d48b0bc3faf9e2cc7123, type: 2}
   components:
   - {fileID: 330585549}
@@ -966,8 +964,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1341081479}
-  systemSettings: {fileID: 11400000, guid: 243e2dfb084294e268825d69ca70d599, type: 2}
-  userSettings: {fileID: 11400000, guid: ddee58900d71d48b0bc3faf9e2cc7123, type: 2}
+  userSettings: {fileID: 11400000, guid: 6e37765e72d854986bccb448be1d2ba9, type: 2}
+  systemSettings: {fileID: 11400000, guid: 4ee1b8ddee4a84c128dc1e3d59d92ab2, type: 2}
 --- !u!1 &1862124136
 GameObject:
   m_ObjectHideFlags: 0

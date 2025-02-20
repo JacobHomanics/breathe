@@ -3,9 +3,9 @@ using UnityEngine;
 public class CameraOffsetDrag : MonoBehaviour
 {
     public Transform target;
+    public CameraOffsetDragUserSettingsScriptableObject userSettings;
+    public CameraOffsetDragSystemSettingsScriptableObject systemSettings;
 
-    public CameraControllerSystemSettingsScriptableObject systemSettings;
-    public CameraControllerUserSettingsScriptableObject userSettings;
 
     void Update()
     {
@@ -18,19 +18,19 @@ public class CameraOffsetDrag : MonoBehaviour
             Drag(target, userSettings.sensitivities, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
     }
 
-    private void Drag(Transform target, Vector2 sensitivities, bool invertYAxis, CameraControllerSystemSettingsScriptableObject.XRotationMethod xRotationMethod, Vector2 clamps)
+    private void Drag(Transform target, Vector2 sensitivities, bool invertYAxis, CameraOffsetDragSystemSettingsScriptableObject.XRotationMethod xRotationMethod, Vector2 clamps)
     {
         var yFrame = GetY(invertYAxis) * sensitivities.y * Time.deltaTime;
         var xFrame = Input.GetAxis("Mouse X") * sensitivities.x * Time.deltaTime;
 
         target.rotation = Quaternion.AngleAxis(xFrame, Vector3.up) * target.rotation;
 
-        if (xRotationMethod == CameraControllerSystemSettingsScriptableObject.XRotationMethod.AngleAxis)
+        if (xRotationMethod == CameraOffsetDragSystemSettingsScriptableObject.XRotationMethod.AngleAxis)
             target.rotation = Quaternion.AngleAxis(yFrame, target.right) * target.rotation;
 
         var ea = target.rotation.eulerAngles;
 
-        if (xRotationMethod == CameraControllerSystemSettingsScriptableObject.XRotationMethod.EulerAngles)
+        if (xRotationMethod == CameraOffsetDragSystemSettingsScriptableObject.XRotationMethod.EulerAngles)
             ea.x += yFrame;
 
         ea.x = ClampAngle(ea.x, clamps.x, clamps.y);
