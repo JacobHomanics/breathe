@@ -2,32 +2,95 @@ using UnityEngine;
 
 public class CameraOffsetDrag : MonoBehaviour
 {
+    public Transform cam;
     public Transform target;
+    public Transform character;
+    public PlayerMotor motor;
+
     public CameraOffsetDragUserSettingsScriptableObject userSettings;
     public CameraOffsetDragSystemSettingsScriptableObject systemSettings;
 
-    public Transform character;
+    public float cursorHideThresholdOnDrag = 100f;
+    public Vector3 mouseStartPosOnDrag;
+    public Vector3 previousMousePositionDuringDrag;
 
-    public PlayerMotor motor;
 
     void Update()
     {
         Calculate(target);
     }
 
+    public bool IsDragThresholdReached
+    {
+        get
+        {
+            var posStartAbsX = Mathf.Abs(mouseStartPosOnDrag.x);
+            var posStartAbsY = Mathf.Abs(mouseStartPosOnDrag.y);
+
+            var prevPosAbsX = Mathf.Abs(previousMousePositionDuringDrag.x);
+            var prevPosAbsY = Mathf.Abs(previousMousePositionDuringDrag.y);
+
+            var diffX = Mathf.Abs(posStartAbsX - prevPosAbsX);
+            var diffY = Mathf.Abs(posStartAbsY - prevPosAbsY);
+
+
+            return diffX >= cursorHideThresholdOnDrag || diffY >= cursorHideThresholdOnDrag;
+        }
+    }
     private void Calculate(Transform target)
     {
-        var isDragEnabled = userSettings.combo.IsResolved;
+        var isDragEnabled = userSettings.leftMouseButtonCombo.IsResolved;
 
-        if (motor.IsForwardActivated || motor.IsBackwardActivated)
-        {
-            if (!isDragEnabled)
-                LerpToDefaultEulerAngles(target);
-        }
+        // if (motor.IsForwardActivated || motor.IsBackwardActivated)
+        // {
+        //     if (!isDragEnabled)
+        //         LerpToDefaultEulerAngles(target);
+        // }
 
-        if (isDragEnabled)
-            Drag(target, userSettings.sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
+        // if (isDragEnabled)
+        //     mouseStartPosOnDrag = Input.mousePosition;
+        // // if ()
+
+        // if (IsDragThresholdReached)
+        // {
+        //     // isRightClickDragEnabled = true;
+        //     // Cursor.visible = false;
+        //     // isDragEnabled = true;
+        // }
+        // else
+        // {
+        //     // Cursor.visible = true;
+        // }
+
+        // previousMousePositionDuringDrag = Input.mousePosition;
+
+        // UpdateCenterPointPosition(target);
+
+
+        // if (isDragEnabled || userSettings.rightMouseButtonCombo.IsResolved)
+        //     Drag(target, userSettings.sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
+
+        // if (userSettings.rightMouseButtonCombo.IsResolved)
+        // {
+        //     Quaternion turnAngle = Quaternion.Euler(0, target.eulerAngles.y, 0);
+        //     character.rotation = turnAngle;
+        // }
+
     }
+
+    // private void UpdateCenterPointPosition(Transform target)
+    // {
+    //     //Resets to character position as a base
+    //     target.position = character.position;
+
+    //     //Sets the x and z values to the offset amount based on the direction of the center point
+    //     target.position += target.TransformDirection(0, 0, 0); //centerPointOffsetPosition.x, 0, centerPointOffsetPosition.z);
+    //                                                            //Sets the y position to a flat offset position with no direction accounted for
+    //                                                            //this is done so that the y stays the same regardless of the center point direction
+    //     target.position += new Vector3(0, 0, 0); //new Vector3(0, centerPointOffsetPosition.y, 0);
+
+    // }
+
 
     public void LerpToDefaultEulerAngles(Transform target)
     {

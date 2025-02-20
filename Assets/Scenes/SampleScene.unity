@@ -943,8 +943,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341081478}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.30070576, y: 0, z: 0, w: 0.953717}
-  m_LocalPosition: {x: 0, y: 0.66, z: 0}
+  m_LocalRotation: {x: 0.30070576, y: -0, z: -0, w: 0.953717}
+  m_LocalPosition: {x: 0.6, y: 1.224, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -964,10 +964,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1341081479}
-  userSettings: {fileID: 11400000, guid: 6e37765e72d854986bccb448be1d2ba9, type: 2}
-  systemSettings: {fileID: 11400000, guid: 4ee1b8ddee4a84c128dc1e3d59d92ab2, type: 2}
   character: {fileID: 2100507548}
   motor: {fileID: 2100507550}
+  userSettings: {fileID: 11400000, guid: 6e37765e72d854986bccb448be1d2ba9, type: 2}
+  systemSettings: {fileID: 11400000, guid: 4ee1b8ddee4a84c128dc1e3d59d92ab2, type: 2}
+  cursorHideThresholdOnDrag: 100
+  mouseStartPosOnDrag: {x: 0, y: 0, z: 0}
+  previousMousePositionDuringDrag: {x: 0, y: 0, z: 0}
 --- !u!1 &1862124136
 GameObject:
   m_ObjectHideFlags: 0
