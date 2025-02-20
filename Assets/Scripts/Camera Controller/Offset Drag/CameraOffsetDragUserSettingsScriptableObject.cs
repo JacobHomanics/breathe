@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "CameraOffsetDragUserSettingsScriptableObject", menuName = "Scriptable Objects/Camera/CameraOffsetDragUserSettingsScriptableObject")]
+[CreateAssetMenu(fileName = "Offset Drag - User Settings", menuName = "Scriptable Objects/Camera/Offset Drag/User Settings")]
 public class CameraOffsetDragUserSettingsScriptableObject : ScriptableObject
 {
     public bool invertYAxis = true;

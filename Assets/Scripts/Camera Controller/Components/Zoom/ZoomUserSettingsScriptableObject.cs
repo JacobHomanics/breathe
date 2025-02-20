@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ZoomUserSettingsScriptableObject", menuName = "Scriptable Objects/Camera/ZoomUserSettingsScriptableObject")]
+[CreateAssetMenu(fileName = "Zoom - User Settings", menuName = "Scriptable Objects/Camera/Components/Zoom/User Settings")]
 public class ZoomUserSettingsScriptableObject : ScriptableObject
 {
     public float zoom = 5f;

@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b1e96489aac449afb6fd36dfd81a23c, type: 3}
-  m_Name: ZoomSystemSettingsScriptableObject
+  m_Script: {fileID: 11500000, guid: c4c3af69be9bb46cebd9b91ca1ec9bb1, type: 3}
+  m_Name: Offset Drag - System Settings
   m_EditorClassIdentifier: 
-  minZoom: 0
+  xRotationMethod: 0
+  clamps: {x: -80, y: 80}

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "CollisionSystemSettingsScriptableObject", menuName = "Scriptable Objects/Camera/CollisionSystemSettingsScriptableObject")]
+[CreateAssetMenu(fileName = "Collision - System Settings", menuName = "Scriptable Objects/Camera/Components/Collision - System Settings")]
 public class CollisionSystemSettingsScriptableObject : ScriptableObject
 {
     public LayerMask layerMask;

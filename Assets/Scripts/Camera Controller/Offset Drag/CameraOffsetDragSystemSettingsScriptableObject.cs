@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "CameraOffsetDragSystemSettingsScriptableObject", menuName = "Scriptable Objects/Camera/CameraOffsetDragSystemSettingsScriptableObject")]
+[CreateAssetMenu(fileName = "Offset Drag - System Settings", menuName = "Scriptable Objects/Camera/Offset Drag/System Settings")]
 public class CameraOffsetDragSystemSettingsScriptableObject : ScriptableObject
 {
     public enum XRotationMethod { EulerAngles, AngleAxis }

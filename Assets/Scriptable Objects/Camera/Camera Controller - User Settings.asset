@@ -9,8 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 912918bdbfeed4f57b3f8ff3bcb5a18f, type: 3}
-  m_Name: CameraOffsetDragUserSettingsScriptableObject
+  m_Script: {fileID: 11500000, guid: 20d86977dd5b24ecc8d37d69b9d3a765, type: 3}
+  m_Name: Camera Controller - User Settings
   m_EditorClassIdentifier: 
+  zoom: 5
+  maxZoom: 10
+  zoomSensitivity: 1000
+  zoomAxis: Mouse ScrollWheel
+  invertZoomAxis: 0
+  periods: {x: 0, y: 0.5, z: 0}
+  amplitudes: {x: 0, y: 0.2, z: 0}
+  smoothing: 5
   invertYAxis: 1
   sensitivities: {x: 1000, y: 1000}
