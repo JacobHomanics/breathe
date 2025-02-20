@@ -92,7 +92,7 @@ AnimatorController:
   - serializedVersion: 5
     m_Name: Head
     m_StateMachine: {fileID: 4157512978205282376}
-    m_Mask: {fileID: 0}
+    m_Mask: {fileID: 31900000, guid: 3d634d49e54f1461b95a269232e7ad9d, type: 2}
     m_Motions: []
     m_Behaviours: []
     m_BlendingMode: 0
@@ -234,7 +234,7 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -5684221406638288524}
+  m_DefaultState: {fileID: 9200045767642636550}
 --- !u!206 &5088013061122779350
 BlendTree:
   m_ObjectHideFlags: 1
