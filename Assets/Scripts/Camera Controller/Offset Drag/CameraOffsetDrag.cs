@@ -84,12 +84,7 @@ public class CameraOffsetDrag : MonoBehaviour
         Debug.Log(isDragEnabled);
 
 
-
-        if (isLeftDragEnabled || isRightDragEnabled)
-        {
-
-        }
-        else
+        if (!isDragEnabled)
         {
             if (motor.IsForwardActivated || motor.IsBackwardActivated)
                 LerpToDefaultEulerAngles(target);
