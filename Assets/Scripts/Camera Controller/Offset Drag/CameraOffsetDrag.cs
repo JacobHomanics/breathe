@@ -28,8 +28,6 @@ public class CameraOffsetDrag : MonoBehaviour
     private bool isLeftDragEnabled;
     private bool isRightDragEnabled;
 
-    private bool isCursorDragCheckInitiated;
-
     private bool isDragEnabled;
 
     private int clickCount = 0;
@@ -50,7 +48,6 @@ public class CameraOffsetDrag : MonoBehaviour
             }
 
             clickCount++;
-            isCursorDragCheckInitiated = true;
         }
 
         if (Input.GetMouseButtonUp(0))
@@ -62,7 +59,6 @@ public class CameraOffsetDrag : MonoBehaviour
         if (Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1))
         {
             clickCount--;
-            isCursorDragCheckInitiated = false;
         }
 
         bool isCursorThresholdReached = Vector3.Distance(mouseStartPosOnDrag, previousMousePositionDuringDrag) >= cursorHideThresholdOnDrag;
@@ -107,16 +103,18 @@ public class CameraOffsetDrag : MonoBehaviour
             target.localRotation = Quaternion.Euler(target.eulerAngles.x, 0, target.eulerAngles.z);
         }
 
-        if (isRightDragEnabled)
+        if (isDragEnabled)
         {
-            DragY(character, userSettings.invertXAxis);
-            DragX(target, userSettings.invertYAxis);
+            if (isRightDragEnabled)
+            {
+                DragY(character, userSettings.invertXAxis);
+                DragX(target, userSettings.invertYAxis);
+            }
+            else if (isLeftDragEnabled)
+            {
+                Drag(target, userSettings.sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
+            }
         }
-        else if (isLeftDragEnabled)
-        {
-            Drag(target, userSettings.sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
-        }
-
     }
 
     private void DragY(Transform target, bool invert)
