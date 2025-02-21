@@ -5,23 +5,6 @@ public class CameraOffsetDragControls : MonoBehaviour
 {
     public CameraOffsetDragSystemSettingsScriptableObject systemSettings;
 
-
-    // public bool isLeftDragDown;
-    // public bool isRightDragDown;
-    // public bool isAnyDragDown;
-
-    // public bool isLeftDragInitiated;
-    // public bool isRightDragInitiated;
-
-    // public bool isAnyDragInitiated;
-
-    // public bool isAllDragInitiated;
-
-    // public bool isLeftDragEnabled;
-    // public bool isRightDragEnabled;
-    // public bool isFirstFrameRightDragEnabled;
-    // public bool isDragToBeSetToEnabled;
-
     public bool isDragEnabled;
 
     public bool isCursorThresholdReached;
@@ -33,7 +16,7 @@ public class CameraOffsetDragControls : MonoBehaviour
     {
         bool isLeftDragDown = Input.GetMouseButtonDown(0);
         bool isRightDragDown = Input.GetMouseButtonDown(1);
-        bool isAnyDragDown = isLeftDragDown || isRightDragDown;
+        // bool isAnyDragDown = isLeftDragDown || isRightDragDown;
 
         bool isLeftDragInitiated = Input.GetMouseButton(0);
         bool isRightDragInitiated = Input.GetMouseButton(1);
@@ -69,10 +52,12 @@ public class CameraOffsetDragControls : MonoBehaviour
             isDragEnabled = false;
         }
 
-        if ((Input.GetMouseButtonUp(0) && !isDragEnabled) || (Input.GetMouseButtonUp(1) && !isDragEnabled))
-        {
+        if (isDragEnabled)
             Mouse.current.WarpCursorPosition(MousePosOnDragStart);
-        }
+        // if ((Input.GetMouseButtonUp(0) && !isDragEnabled) || (Input.GetMouseButtonUp(1) && !isDragEnabled))
+        // {
+        //     Mouse.current.WarpCursorPosition(MousePosOnDragStart);
+        // }
 
         Cursor.visible = !isDragEnabled;
 
