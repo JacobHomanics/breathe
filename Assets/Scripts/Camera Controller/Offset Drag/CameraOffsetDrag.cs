@@ -85,111 +85,38 @@ public class CameraOffsetDrag : MonoBehaviour
         isLeftDragEnabled = isDragEnabled && isLeftDragInitiated;
         isRightDragEnabled = isDragEnabled && isRightDragInitiated;
 
+        if (!isDragEnabled)
+        {
+            if (motor.IsForwardActivated || motor.IsBackwardActivated)
+                LerpToDefaultEulerAngles(target);
 
+            return;
+        }
 
-
-
-        // if (Input.GetMouseButtonDown(0))
-        //     IsLeftDragEnabled = true;
-
-        // if (Input.GetMouseButtonDown(1))
-        //     IsRightDragEnabled = true;
-
-        // if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
-        // {
-        //     if (ClickCount == 0)
-        //     {
-        //         MousePositionOnDragStart = PreviousMousePosition = Input.mousePosition;
-        //     }
-
-        //     ClickCount++;
-        // }
-
-        // if (Input.GetMouseButtonUp(0))
-        //     IsLeftDragEnabled = false;
-
-        // if (Input.GetMouseButtonUp(1))
-        //     IsRightDragEnabled = false;
-
-        // if (Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1))
-        // {
-        //     ClickCount--;
-        // }
-
-        // // bool isCursorThresholdReached = Vector3.Distance(MousePositionOnDragStart, PreviousMousePosition) >= cursorHideThresholdOnDrag;
-        // bool isDualClickActive = Input.GetMouseButton(0) && Input.GetMouseButton(1);
-
-        // PreviousMousePosition = Input.mousePosition;
-        // if (ClickCount > 0)
-        // {
-        //     if (isCursorThresholdReached)
-        //         IsDragEnabled = true;
-        // }
-
-        // if (isDualClickActive)
-        // {
-        //     IsDragEnabled = true;
-        // }
-
-        // if (ClickCount <= 0)
-        // {
-        //     IsDragEnabled = false;
-        // }
-
-
-        // bool didStartRightClickDrag;
-
-        // if (IsRightDragEnabled)
-        // {
-        //     if (!previousIsDragEnabled)
-        //     {
-        //         if (Input.GetMouseButtonDown(1))
-        //         {
-
-        //         }
-        //     }
-        // }
-
-
-        // previousIsDragEnabled = IsDragEnabled;
-
-
-        // if (!IsDragEnabled)
-        // {
-        //     if (motor.IsForwardActivated || motor.IsBackwardActivated)
-        //         LerpToDefaultEulerAngles(target);
-
-        //     Debug.Log("Returned");
-        //     return;
-        // }
-
-        // Drag();
+        Drag();
     }
-
-    private bool previousIsDragEnabled;
-    private bool didDragStartOnRightMouseButton;
 
     private void Drag()
     {
-        Debug.Log("Here ye");
-        if (Input.GetMouseButtonDown(1))
+        // Debug.Log("Here ye");
+        // if (Input.GetMouseButtonDown(1))
+        // {
+        //     Quaternion turnAngle = Quaternion.Euler(0, target.eulerAngles.y, 0);
+        //     character.rotation = turnAngle;
+
+        //     target.localRotation = Quaternion.Euler(target.eulerAngles.x, 0, target.eulerAngles.z);
+        //     Debug.Log("Turned");
+        // }
+
+        if (isRightDragEnabled)
         {
-            Quaternion turnAngle = Quaternion.Euler(0, target.eulerAngles.y, 0);
-            character.rotation = turnAngle;
-
-            target.localRotation = Quaternion.Euler(target.eulerAngles.x, 0, target.eulerAngles.z);
-            Debug.Log("Turned");
+            DragY(character, userSettings.invertXAxis);
+            DragX(target, userSettings.invertYAxis);
         }
-
-        // if (IsRightDragEnabled)
-        // {
-        //     DragY(character, userSettings.invertXAxis);
-        //     DragX(target, userSettings.invertYAxis);
-        // }
-        // else if (IsLeftDragEnabled)
-        // {
-        //     Drag(target, userSettings.sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
-        // }
+        else if (isLeftDragEnabled)
+        {
+            Drag(target, userSettings.sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
+        }
     }
 
     private void DragY(Transform target, bool invert)
