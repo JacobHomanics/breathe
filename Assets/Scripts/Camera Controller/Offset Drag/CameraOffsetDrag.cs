@@ -59,7 +59,7 @@ public class CameraOffsetDrag : MonoBehaviour
         }
         else if (isLeftDragEnabled)
         {
-            Drag(target, userSettings.sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
+            Drag(target, userSettings.Sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
         }
     }
 
@@ -90,7 +90,7 @@ public class CameraOffsetDrag : MonoBehaviour
 
     private void DragX(Transform target, bool invert)
     {
-        float mouseY = Input.GetAxis("Mouse Y") * userSettings.sensitivities.y * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * userSettings.Sensitivities.y * Time.deltaTime;
         mouseY = invert ? -mouseY : mouseY;
 
         var ea = target.rotation.eulerAngles;
@@ -103,7 +103,7 @@ public class CameraOffsetDrag : MonoBehaviour
 
     private void DragY(Transform target, bool invert)
     {
-        float mouseX = Input.GetAxis("Mouse X") * userSettings.sensitivities.x * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * userSettings.Sensitivities.x * Time.deltaTime;
         mouseX = invert ? -mouseX : mouseX;
 
         target.Rotate(Vector3.up * mouseX);

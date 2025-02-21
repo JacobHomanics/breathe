@@ -16,12 +16,7 @@ MonoBehaviour:
   invertYAxis: 1
   xAxis: Mouse X
   yAxis: Mouse Y
-  sensitivities: {x: 2000, y: 2000}
+  webGlSensitivities: {x: 400, y: 400}
+  nonWebGlSensitivities: {x: 1000, y: 1000}
   defaultEulerAngles: {x: 35, y: 0, z: 0}
   defaultSpeed: 5
-  leftMouseButtonCombo:
-    keyCodes: 
-    mouseButtons: 00000000
-  rightMouseButtonCombo:
-    keyCodes: 
-    mouseButtons: 01000000
