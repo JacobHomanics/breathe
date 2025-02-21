@@ -9,12 +9,10 @@ public class CameraOffsetDrag : MonoBehaviour
     public CameraOffsetDragUserSettingsScriptableObject userSettings;
     public CameraOffsetDragSystemSettingsScriptableObject systemSettings;
 
-    public float cursorHideThresholdOnDrag = 100f;
 
-    public bool IsLeftDragDown;
-    public bool IsRightDragDown;
-    public bool IsAnyDragDown;
-
+    public bool isLeftDragDown;
+    public bool isRightDragDown;
+    public bool isAnyDragDown;
 
     public bool isLeftDragInitiated;
     public bool isRightDragInitiated;
@@ -44,9 +42,18 @@ public class CameraOffsetDrag : MonoBehaviour
 
     private void Calculate()
     {
-        IsLeftDragDown = Input.GetMouseButtonDown(0);
-        IsRightDragDown = Input.GetMouseButtonDown(1);
-        IsAnyDragDown = IsLeftDragDown || IsRightDragDown;
+        CalculateDragControls();
+        bool firstFrame = isFirstFrameRightDragEnabled;
+        isFirstFrameRightDragEnabled = false;
+
+        Drag(firstFrame, isLeftDragEnabled, isRightDragEnabled);
+    }
+
+    private void CalculateDragControls()
+    {
+        isLeftDragDown = Input.GetMouseButtonDown(0);
+        isRightDragDown = Input.GetMouseButtonDown(1);
+        isAnyDragDown = isLeftDragDown || isRightDragDown;
 
         isLeftDragInitiated = Input.GetMouseButton(0);
         isRightDragInitiated = Input.GetMouseButton(1);
@@ -55,8 +62,8 @@ public class CameraOffsetDrag : MonoBehaviour
 
         isAllDragInitiated = isLeftDragInitiated && isRightDragInitiated;
 
-        if ((IsLeftDragDown && !isRightDragInitiated) ||
-            (IsRightDragDown && !isLeftDragInitiated))
+        if ((isLeftDragDown && !isRightDragInitiated) ||
+            (isRightDragDown && !isLeftDragInitiated))
         {
             totalDistance = default;
         }
@@ -66,16 +73,16 @@ public class CameraOffsetDrag : MonoBehaviour
             totalDistance += new Vector3(Mathf.Abs(Input.mousePositionDelta.x), Mathf.Abs(Input.mousePositionDelta.y), 0);
         }
 
-        isCursorThresholdReached = isAnyDragInitiated && (totalDistance.x >= cursorHideThresholdOnDrag || totalDistance.y >= cursorHideThresholdOnDrag);
+        isCursorThresholdReached = isAnyDragInitiated && (totalDistance.x >= systemSettings.cursorHideThresholdOnDrag || totalDistance.y >= systemSettings.cursorHideThresholdOnDrag);
 
         isDragEnabled = isAllDragInitiated || isCursorThresholdReached;
         isLeftDragEnabled = isDragEnabled && isLeftDragInitiated;
         isRightDragEnabled = isDragEnabled && isRightDragInitiated;
         isFirstFrameRightDragEnabled = isRightDragEnabled && !isFirstFrameRightDragEnabled;
-        bool firstFrame = isFirstFrameRightDragEnabled;
-        isFirstFrameRightDragEnabled = false;
+    }
 
-
+    private void Drag(bool firstFrame, bool isLeftDragEnabled, bool isRightDragEnabled)
+    {
         if (!isDragEnabled)
         {
             if (motor.IsForwardActivated || motor.IsBackwardActivated)
@@ -84,11 +91,6 @@ public class CameraOffsetDrag : MonoBehaviour
             return;
         }
 
-        Drag(firstFrame);
-    }
-
-    private void Drag(bool firstFrame)
-    {
         if (firstFrame)
         {
             Quaternion turnAngle = Quaternion.Euler(0, target.eulerAngles.y, 0);

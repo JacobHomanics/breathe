@@ -7,4 +7,6 @@ public class CameraOffsetDragSystemSettingsScriptableObject : ScriptableObject
     public XRotationMethod xRotationMethod;
 
     public Vector2 clamps = new(-80, 80);
+
+    public float cursorHideThresholdOnDrag = 100f;
 }
