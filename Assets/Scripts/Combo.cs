@@ -3,8 +3,28 @@ using UnityEngine;
 [System.Serializable]
 public class Combo
 {
-    public KeyCode[] keyCodes;
-    public int[] mouseButtons;
+    public enum InputResolutionType { Down, Up, Active }
+
+
+    [System.Serializable]
+    public class KeyCodeWithResolutionType
+    {
+        public KeyCode keyCode;
+        public InputResolutionType resolutionType;
+    }
+
+    [System.Serializable]
+    public class MouseButtonWithResolutionType
+    {
+        public int mouseButton;
+        public InputResolutionType resolutionType;
+    }
+
+    public KeyCodeWithResolutionType[] keyCodes;
+    public MouseButtonWithResolutionType[] mouseButtons;
+
+    // public KeyCode[] keyCodes;
+    // public int[] mouseButtons;
 
     public bool IsResolved
     {
@@ -14,12 +34,30 @@ public class Combo
 
             for (int i = 0; i < keyCodes.Length; i++)
             {
-                isValid &= Input.GetKey(keyCodes[i]);
+                bool resolution = false;
+                if (keyCodes[i].resolutionType == InputResolutionType.Down)
+                    resolution = Input.GetKeyDown(keyCodes[i].keyCode);
+                if (keyCodes[i].resolutionType == InputResolutionType.Up)
+                    resolution = Input.GetKeyUp(keyCodes[i].keyCode);
+                if (keyCodes[i].resolutionType == InputResolutionType.Active)
+                    resolution = Input.GetKey(keyCodes[i].keyCode);
+
+                isValid &= resolution;
             }
 
             for (int i = 0; i < mouseButtons.Length; i++)
             {
-                isValid &= Input.GetMouseButton(mouseButtons[i]);
+                bool resolution = false;
+                if (mouseButtons[i].resolutionType == InputResolutionType.Down)
+                    resolution = Input.GetMouseButtonDown(mouseButtons[i].mouseButton);
+                if (mouseButtons[i].resolutionType == InputResolutionType.Up)
+                    resolution = Input.GetMouseButtonUp(mouseButtons[i].mouseButton);
+                if (mouseButtons[i].resolutionType == InputResolutionType.Active)
+                    resolution = Input.GetMouseButton(mouseButtons[i].mouseButton);
+
+                isValid &= resolution;
+
+                // isValid &= Input.GetMouseButton(mouseButtons[i]);
             }
 
             return isValid;

@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class CameraOffsetDrag : MonoBehaviour
@@ -80,9 +79,6 @@ public class CameraOffsetDrag : MonoBehaviour
         {
             isDragEnabled = false;
         }
-
-        Debug.Log(isDragEnabled);
-
 
         if (!isDragEnabled)
         {
