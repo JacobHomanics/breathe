@@ -5,7 +5,6 @@ public class Combo
 {
     public enum InputResolutionType { Down, Up, Active }
 
-
     [System.Serializable]
     public class KeyCodeWithResolutionType
     {
@@ -22,9 +21,6 @@ public class Combo
 
     public KeyCodeWithResolutionType[] keyCodes;
     public MouseButtonWithResolutionType[] mouseButtons;
-
-    // public KeyCode[] keyCodes;
-    // public int[] mouseButtons;
 
     public bool IsResolved
     {
@@ -56,8 +52,6 @@ public class Combo
                     resolution = Input.GetMouseButton(mouseButtons[i].mouseButton);
 
                 isValid &= resolution;
-
-                // isValid &= Input.GetMouseButton(mouseButtons[i]);
             }
 
             return isValid;

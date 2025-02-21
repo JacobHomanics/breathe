@@ -10,8 +10,16 @@ public class CameraOffsetDrag : MonoBehaviour
     public CameraOffsetDragSystemSettingsScriptableObject systemSettings;
 
     public float cursorHideThresholdOnDrag = 100f;
-    public Vector3 mouseStartPosOnDrag;
-    public Vector3 previousMousePositionDuringDrag;
+    public Vector3 MousePositionOnDragStart { get; private set; }
+    public Vector3 PreviousMousePosition { get; private set; }
+
+    public bool IsLeftDragEnabled { get; private set; }
+    public bool IsRightDragEnabled { get; private set; }
+
+    public bool IsDragEnabled { get; private set; }
+
+    public int ClickCount { get; private set; }
+
 
     void Start()
     {
@@ -23,88 +31,108 @@ public class CameraOffsetDrag : MonoBehaviour
         Calculate();
     }
 
-
-    private bool isLeftDragEnabled;
-    private bool isRightDragEnabled;
-
-    private bool isDragEnabled;
-
-    private int clickCount = 0;
-
     private void Calculate()
     {
         if (Input.GetMouseButtonDown(0))
-            isLeftDragEnabled = true;
+            IsLeftDragEnabled = true;
 
         if (Input.GetMouseButtonDown(1))
-            isRightDragEnabled = true;
+            IsRightDragEnabled = true;
 
         if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
         {
-            if (clickCount == 0)
+            if (ClickCount == 0)
             {
-                mouseStartPosOnDrag = previousMousePositionDuringDrag = Input.mousePosition;
+                MousePositionOnDragStart = PreviousMousePosition = Input.mousePosition;
             }
 
-            clickCount++;
+            ClickCount++;
         }
 
         if (Input.GetMouseButtonUp(0))
-            isLeftDragEnabled = false;
+            IsLeftDragEnabled = false;
 
         if (Input.GetMouseButtonUp(1))
-            isRightDragEnabled = false;
+            IsRightDragEnabled = false;
 
         if (Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1))
         {
-            clickCount--;
+            ClickCount--;
         }
 
-        bool isCursorThresholdReached = Vector3.Distance(mouseStartPosOnDrag, previousMousePositionDuringDrag) >= cursorHideThresholdOnDrag;
+        bool isCursorThresholdReached = Vector3.Distance(MousePositionOnDragStart, PreviousMousePosition) >= cursorHideThresholdOnDrag;
         bool isDualClickActive = Input.GetMouseButton(0) && Input.GetMouseButton(1);
 
-        previousMousePositionDuringDrag = Input.mousePosition;
-        if (clickCount > 0)
+        PreviousMousePosition = Input.mousePosition;
+        if (ClickCount > 0)
         {
             if (isCursorThresholdReached)
-                isDragEnabled = true;
+                IsDragEnabled = true;
         }
 
         if (isDualClickActive)
         {
-            isDragEnabled = true;
+            IsDragEnabled = true;
         }
 
-        if (clickCount <= 0)
+        if (ClickCount <= 0)
         {
-            isDragEnabled = false;
+            IsDragEnabled = false;
         }
 
-        if (!isDragEnabled)
+
+        bool didStartRightClickDrag;
+
+        if (IsRightDragEnabled)
+        {
+            if (!previousIsDragEnabled)
+            {
+                if (Input.GetMouseButtonDown(1))
+                {
+
+                }
+            }
+        }
+
+
+        previousIsDragEnabled = IsDragEnabled;
+
+
+        if (!IsDragEnabled)
         {
             if (motor.IsForwardActivated || motor.IsBackwardActivated)
                 LerpToDefaultEulerAngles(target);
+
+            Debug.Log("Returned");
+            return;
         }
 
+        Drag();
+    }
+
+    private bool previousIsDragEnabled;
+    private bool didDragStartOnRightMouseButton;
+
+    private void Drag()
+    {
+        Debug.Log("Here ye");
         if (Input.GetMouseButtonDown(1))
         {
             Quaternion turnAngle = Quaternion.Euler(0, target.eulerAngles.y, 0);
             character.rotation = turnAngle;
 
             target.localRotation = Quaternion.Euler(target.eulerAngles.x, 0, target.eulerAngles.z);
+            Debug.Log("Turned");
         }
 
-        if (isDragEnabled)
+        if (IsRightDragEnabled)
         {
-            if (isRightDragEnabled)
-            {
-                DragY(character, userSettings.invertXAxis);
-                DragX(target, userSettings.invertYAxis);
-            }
-            else if (isLeftDragEnabled)
-            {
-                Drag(target, userSettings.sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
-            }
+            DragY(character, userSettings.invertXAxis);
+            DragX(target, userSettings.invertYAxis);
+        }
+        else if (IsLeftDragEnabled)
+        {
+            Drag(target, userSettings.sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
         }
     }
 
