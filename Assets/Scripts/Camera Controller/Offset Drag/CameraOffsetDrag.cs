@@ -13,10 +13,9 @@ public class CameraOffsetDrag : MonoBehaviour
     public Vector3 MousePositionOnDragStart { get; private set; }
     public Vector3 PreviousMousePosition { get; private set; }
 
-    public bool IsLeftDragEnabled { get; private set; }
-    public bool IsRightDragEnabled { get; private set; }
+    // public bool IsLeftDragEnabled { get; private set; }
+    // public bool IsRightDragEnabled { get; private set; }
 
-    public bool IsDragEnabled { get; private set; }
 
     public int ClickCount { get; private set; }
 
@@ -31,83 +30,140 @@ public class CameraOffsetDrag : MonoBehaviour
         Calculate();
     }
 
+    public bool IsLeftDragDown;
+    public bool IsRightDragDown;
+    public bool IsAnyDragDown;
+
+
+    public bool isLeftDragInitiated;
+    public bool isRightDragInitiated;
+
+    public bool isAnyDragInitiated;
+
+    public bool isAllDragInitiated;
+
+    public bool isLeftDragEnabled;
+    public bool isRightDragEnabled;
+
+    public bool isDragEnabled;
+
+
+    // public bool isDragDetectionActive;
+
+    public bool isCursorThresholdReached;
+
+    public Vector3 totalDistance;
+
     private void Calculate()
     {
-        if (Input.GetMouseButtonDown(0))
-            IsLeftDragEnabled = true;
+        IsLeftDragDown = Input.GetMouseButtonDown(0);
+        IsRightDragDown = Input.GetMouseButtonDown(1);
+        IsAnyDragDown = IsLeftDragDown || IsRightDragDown;
 
-        if (Input.GetMouseButtonDown(1))
-            IsRightDragEnabled = true;
+        isLeftDragInitiated = Input.GetMouseButton(0);
+        isRightDragInitiated = Input.GetMouseButton(1);
+        isAnyDragInitiated = isLeftDragInitiated || isRightDragInitiated;
 
-        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
+
+        isAllDragInitiated = isLeftDragInitiated && isRightDragInitiated;
+
+        if ((IsLeftDragDown && !isRightDragInitiated) ||
+            (IsRightDragDown && !isLeftDragInitiated))
         {
-            if (ClickCount == 0)
-            {
-                MousePositionOnDragStart = PreviousMousePosition = Input.mousePosition;
-            }
-
-            ClickCount++;
+            MousePositionOnDragStart = Input.mousePosition;
+            totalDistance = default;
         }
 
-        if (Input.GetMouseButtonUp(0))
-            IsLeftDragEnabled = false;
-
-        if (Input.GetMouseButtonUp(1))
-            IsRightDragEnabled = false;
-
-        if (Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1))
+        if (isAnyDragInitiated)
         {
-            ClickCount--;
+            totalDistance += new Vector3(Mathf.Abs(Input.mousePositionDelta.x), Mathf.Abs(Input.mousePositionDelta.y), 0);
         }
 
-        bool isCursorThresholdReached = Vector3.Distance(MousePositionOnDragStart, PreviousMousePosition) >= cursorHideThresholdOnDrag;
-        bool isDualClickActive = Input.GetMouseButton(0) && Input.GetMouseButton(1);
+        isCursorThresholdReached = isAnyDragInitiated && (totalDistance.x >= cursorHideThresholdOnDrag || totalDistance.y >= cursorHideThresholdOnDrag);
 
-        PreviousMousePosition = Input.mousePosition;
-        if (ClickCount > 0)
-        {
-            if (isCursorThresholdReached)
-                IsDragEnabled = true;
-        }
-
-        if (isDualClickActive)
-        {
-            IsDragEnabled = true;
-        }
-
-        if (ClickCount <= 0)
-        {
-            IsDragEnabled = false;
-        }
+        isDragEnabled = isAllDragInitiated || isCursorThresholdReached;
+        isLeftDragEnabled = isDragEnabled && isLeftDragInitiated;
+        isRightDragEnabled = isDragEnabled && isRightDragInitiated;
 
 
-        bool didStartRightClickDrag;
-
-        if (IsRightDragEnabled)
-        {
-            if (!previousIsDragEnabled)
-            {
-                if (Input.GetMouseButtonDown(1))
-                {
-
-                }
-            }
-        }
 
 
-        previousIsDragEnabled = IsDragEnabled;
+
+        // if (Input.GetMouseButtonDown(0))
+        //     IsLeftDragEnabled = true;
+
+        // if (Input.GetMouseButtonDown(1))
+        //     IsRightDragEnabled = true;
+
+        // if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
+        // {
+        //     if (ClickCount == 0)
+        //     {
+        //         MousePositionOnDragStart = PreviousMousePosition = Input.mousePosition;
+        //     }
+
+        //     ClickCount++;
+        // }
+
+        // if (Input.GetMouseButtonUp(0))
+        //     IsLeftDragEnabled = false;
+
+        // if (Input.GetMouseButtonUp(1))
+        //     IsRightDragEnabled = false;
+
+        // if (Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1))
+        // {
+        //     ClickCount--;
+        // }
+
+        // // bool isCursorThresholdReached = Vector3.Distance(MousePositionOnDragStart, PreviousMousePosition) >= cursorHideThresholdOnDrag;
+        // bool isDualClickActive = Input.GetMouseButton(0) && Input.GetMouseButton(1);
+
+        // PreviousMousePosition = Input.mousePosition;
+        // if (ClickCount > 0)
+        // {
+        //     if (isCursorThresholdReached)
+        //         IsDragEnabled = true;
+        // }
+
+        // if (isDualClickActive)
+        // {
+        //     IsDragEnabled = true;
+        // }
+
+        // if (ClickCount <= 0)
+        // {
+        //     IsDragEnabled = false;
+        // }
 
 
-        if (!IsDragEnabled)
-        {
-            if (motor.IsForwardActivated || motor.IsBackwardActivated)
-                LerpToDefaultEulerAngles(target);
+        // bool didStartRightClickDrag;
 
-            Debug.Log("Returned");
-            return;
-        }
+        // if (IsRightDragEnabled)
+        // {
+        //     if (!previousIsDragEnabled)
+        //     {
+        //         if (Input.GetMouseButtonDown(1))
+        //         {
 
-        Drag();
+        //         }
+        //     }
+        // }
+
+
+        // previousIsDragEnabled = IsDragEnabled;
+
+
+        // if (!IsDragEnabled)
+        // {
+        //     if (motor.IsForwardActivated || motor.IsBackwardActivated)
+        //         LerpToDefaultEulerAngles(target);
+
+        //     Debug.Log("Returned");
+        //     return;
+        // }
+
+        // Drag();
     }
 
     private bool previousIsDragEnabled;
@@ -125,15 +181,15 @@ public class CameraOffsetDrag : MonoBehaviour
             Debug.Log("Turned");
         }
 
-        if (IsRightDragEnabled)
-        {
-            DragY(character, userSettings.invertXAxis);
-            DragX(target, userSettings.invertYAxis);
-        }
-        else if (IsLeftDragEnabled)
-        {
-            Drag(target, userSettings.sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
-        }
+        // if (IsRightDragEnabled)
+        // {
+        //     DragY(character, userSettings.invertXAxis);
+        //     DragX(target, userSettings.invertYAxis);
+        // }
+        // else if (IsLeftDragEnabled)
+        // {
+        //     Drag(target, userSettings.sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
+        // }
     }
 
     private void DragY(Transform target, bool invert)
