@@ -24,6 +24,8 @@ public class CameraOffsetDrag : MonoBehaviour
     public bool isLeftDragEnabled;
     public bool isRightDragEnabled;
     public bool isFirstFrameRightDragEnabled;
+    public bool isDragToBeSetToEnabled;
+
     public bool isDragEnabled;
 
     public bool isCursorThresholdReached;
@@ -59,7 +61,6 @@ public class CameraOffsetDrag : MonoBehaviour
         isRightDragInitiated = Input.GetMouseButton(1);
         isAnyDragInitiated = isLeftDragInitiated || isRightDragInitiated;
 
-
         isAllDragInitiated = isLeftDragInitiated && isRightDragInitiated;
 
         if ((isLeftDragDown && !isRightDragInitiated) ||
@@ -75,10 +76,23 @@ public class CameraOffsetDrag : MonoBehaviour
 
         isCursorThresholdReached = isAnyDragInitiated && (totalDistance.x >= systemSettings.cursorHideThresholdOnDrag || totalDistance.y >= systemSettings.cursorHideThresholdOnDrag);
 
-        isDragEnabled = isAllDragInitiated || isCursorThresholdReached;
+        isDragToBeSetToEnabled = isAllDragInitiated || isCursorThresholdReached;
+
+
+        if (isDragToBeSetToEnabled)
+        {
+            isDragEnabled = true;
+        }
+
+        if (!Input.GetMouseButton(0) && !Input.GetMouseButton(1))
+        {
+            isDragEnabled = false;
+        }
+
         isLeftDragEnabled = isDragEnabled && isLeftDragInitiated;
         isRightDragEnabled = isDragEnabled && isRightDragInitiated;
         isFirstFrameRightDragEnabled = isRightDragEnabled && !isFirstFrameRightDragEnabled;
+
     }
 
     private void Drag(bool firstFrame, bool isLeftDragEnabled, bool isRightDragEnabled)
