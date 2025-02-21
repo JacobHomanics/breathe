@@ -16,7 +16,7 @@ MonoBehaviour:
   invertYAxis: 1
   xAxis: Mouse X
   yAxis: Mouse Y
-  sensitivities: {x: 1000, y: 1000}
+  sensitivities: {x: 2000, y: 2000}
   defaultEulerAngles: {x: 35, y: 0, z: 0}
   defaultSpeed: 5
   leftMouseButtonCombo:

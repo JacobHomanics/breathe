@@ -1,8 +1,8 @@
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class CameraOffsetDrag : MonoBehaviour
 {
-    public Transform cam;
     public Transform target;
     public Transform character;
     public PlayerMotor motor;
@@ -14,6 +14,10 @@ public class CameraOffsetDrag : MonoBehaviour
     public Vector3 mouseStartPosOnDrag;
     public Vector3 previousMousePositionDuringDrag;
 
+    void Start()
+    {
+        target.rotation = Quaternion.Euler(userSettings.defaultEulerAngles);
+    }
 
     void Update()
     {
@@ -39,98 +43,64 @@ public class CameraOffsetDrag : MonoBehaviour
     }
     private void Calculate(Transform target)
     {
-        var isDragEnabled = userSettings.leftMouseButtonCombo.IsResolved;
-
-        // if (motor.IsForwardActivated || motor.IsBackwardActivated)
-        // {
-        //     if (!isDragEnabled)
-        //         LerpToDefaultEulerAngles(target);
-        // }
-
-        // if (isDragEnabled)
-        //     mouseStartPosOnDrag = Input.mousePosition;
-        // // if ()
-
-        // if (IsDragThresholdReached)
-        // {
-        //     // isRightClickDragEnabled = true;
-        //     // Cursor.visible = false;
-        //     // isDragEnabled = true;
-        // }
-        // else
-        // {
-        //     // Cursor.visible = true;
-        // }
-
-        // previousMousePositionDuringDrag = Input.mousePosition;
-
-        // UpdateCenterPointPosition(target);
-
-
-        // if (isDragEnabled || userSettings.rightMouseButtonCombo.IsResolved)
-        //     Drag(target, userSettings.sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
-
-        // if (userSettings.rightMouseButtonCombo.IsResolved)
-        // {
-        //     Quaternion turnAngle = Quaternion.Euler(0, target.eulerAngles.y, 0);
-        //     character.rotation = turnAngle;
-        // }
-
-    }
-
-    // private void UpdateCenterPointPosition(Transform target)
-    // {
-    //     //Resets to character position as a base
-    //     target.position = character.position;
-
-    //     //Sets the x and z values to the offset amount based on the direction of the center point
-    //     target.position += target.TransformDirection(0, 0, 0); //centerPointOffsetPosition.x, 0, centerPointOffsetPosition.z);
-    //                                                            //Sets the y position to a flat offset position with no direction accounted for
-    //                                                            //this is done so that the y stays the same regardless of the center point direction
-    //     target.position += new Vector3(0, 0, 0); //new Vector3(0, centerPointOffsetPosition.y, 0);
-
-    // }
-
-
-    public void LerpToDefaultEulerAngles(Transform target)
-    {
-        var targetEulers = target.eulerAngles;
-
-        if (target.rotation.y != Quaternion.Euler(userSettings.defaultEulerAngles).y)
+        if (userSettings.leftMouseButtonCombo.IsResolved || userSettings.rightMouseButtonCombo.IsResolved)
         {
-            targetEulers.y = userSettings.defaultEulerAngles.y;
+
+        }
+        else
+        {
+            if (motor.IsForwardActivated || motor.IsBackwardActivated)
+                LerpToDefaultEulerAngles(target);
         }
 
-        //Set to != to work in all situations.
-        //This does not match WoW's functionality, where if the axis is more than the default rotation,
-        //then it is true.
-        //I.E. if the camera is rotated below the player, then this should not be true
-        if (target.rotation.x != Quaternion.Euler(userSettings.defaultEulerAngles).x)
+        if (userSettings.leftMouseButtonCombo.IsResolved)
         {
-            targetEulers.x = userSettings.defaultEulerAngles.x;
+            Drag(target, userSettings.sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
         }
 
-        var targetRot = character.rotation * Quaternion.Euler(targetEulers);
+        if (Input.GetMouseButtonDown(1))
+        {
+            Quaternion turnAngle = Quaternion.Euler(0, target.eulerAngles.y, 0);
+            character.rotation = turnAngle;
 
-        LerpToEulerAngles(target, targetRot, userSettings.defaultSpeed);
+            target.localRotation = Quaternion.Euler(target.eulerAngles.x, 0, target.eulerAngles.z);
+        }
+
+        if (userSettings.rightMouseButtonCombo.IsResolved)
+        {
+            DragY(character, userSettings.invertXAxis);
+            DragX(target, userSettings.invertYAxis);
+        }
     }
 
-
-    private void LerpToEulerAngles(Transform transform, Quaternion targetRot, float speed)
+    private void DragY(Transform target, bool invert)
     {
-        var result = Quaternion.Lerp(transform.rotation, targetRot, Time.deltaTime * speed);
-        transform.rotation = result;
+        float mouseX = Input.GetAxis("Mouse X") * userSettings.sensitivities.x * Time.deltaTime;
+        mouseX = invert ? -mouseX : mouseX;
+
+        target.Rotate(Vector3.up * mouseX);
     }
 
+    private void DragX(Transform target, bool invert)
+    {
+        float mouseY = Input.GetAxis("Mouse Y") * userSettings.sensitivities.y * Time.deltaTime;
+        mouseY = invert ? -mouseY : mouseY;
+
+        var ea = target.rotation.eulerAngles;
+
+        ea.x += mouseY;
+
+        ea.x = ClampAngle(ea.x, systemSettings.clamps.x, systemSettings.clamps.y);
+        target.eulerAngles = ea;
+    }
 
     private void Drag(Transform target, Vector2 sensitivities, string xAxis, string yAxis, bool invertXAxis, bool invertYAxis, CameraOffsetDragSystemSettingsScriptableObject.XRotationMethod xRotationMethod, Vector2 clamps)
     {
-        var x = Input.GetAxis(xAxis);
-        var y = Input.GetAxis(yAxis);
+        var x = Input.GetAxis(xAxis) * sensitivities.x * Time.deltaTime; ;
+        var y = Input.GetAxis(yAxis) * sensitivities.y * Time.deltaTime;
 
-
-        var yDelta = invertYAxis ? -y : y * sensitivities.y * Time.deltaTime;
-        var xDelta = invertXAxis ? -x : x * sensitivities.x * Time.deltaTime;
+        var yDelta = invertYAxis ? -y : y;
+        var xDelta = invertXAxis ? -x : x;
 
         target.rotation = Quaternion.AngleAxis(xDelta, Vector3.up) * target.rotation;
 
@@ -152,5 +122,36 @@ public class CameraOffsetDrag : MonoBehaviour
         if (angle < 0f) angle = 360 + angle;
         if (angle > 180f) return Mathf.Max(angle, 360 + from);
         return Mathf.Min(angle, to);
+    }
+
+    public void LerpToDefaultEulerAngles(Transform target)
+    {
+        var targetEulers = target.eulerAngles;
+
+        if (target.rotation.y != Quaternion.Euler(userSettings.defaultEulerAngles).y)
+        {
+            targetEulers.y = userSettings.defaultEulerAngles.y;
+        }
+
+        if (target.rotation.z != Quaternion.Euler(userSettings.defaultEulerAngles).z)
+        {
+            targetEulers.z = userSettings.defaultEulerAngles.z;
+        }
+
+        if (target.rotation.x != Quaternion.Euler(userSettings.defaultEulerAngles).x)
+        {
+            targetEulers.x = userSettings.defaultEulerAngles.x;
+        }
+
+        var targetRot = character.rotation * Quaternion.Euler(targetEulers);
+
+        LerpToEulerAngles(target, targetRot, userSettings.defaultSpeed);
+    }
+
+
+    private void LerpToEulerAngles(Transform transform, Quaternion targetRot, float speed)
+    {
+        var result = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * speed);
+        transform.rotation = result;
     }
 }
