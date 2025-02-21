@@ -10,25 +10,6 @@ public class CameraOffsetDrag : MonoBehaviour
     public CameraOffsetDragSystemSettingsScriptableObject systemSettings;
 
     public float cursorHideThresholdOnDrag = 100f;
-    public Vector3 MousePositionOnDragStart { get; private set; }
-    public Vector3 PreviousMousePosition { get; private set; }
-
-    // public bool IsLeftDragEnabled { get; private set; }
-    // public bool IsRightDragEnabled { get; private set; }
-
-
-    public int ClickCount { get; private set; }
-
-
-    void Start()
-    {
-        target.rotation = Quaternion.Euler(userSettings.defaultEulerAngles);
-    }
-
-    void Update()
-    {
-        Calculate();
-    }
 
     public bool IsLeftDragDown;
     public bool IsRightDragDown;
@@ -44,15 +25,22 @@ public class CameraOffsetDrag : MonoBehaviour
 
     public bool isLeftDragEnabled;
     public bool isRightDragEnabled;
-
+    public bool isFirstFrameRightDragEnabled;
     public bool isDragEnabled;
-
-
-    // public bool isDragDetectionActive;
 
     public bool isCursorThresholdReached;
 
     public Vector3 totalDistance;
+
+    void Start()
+    {
+        target.rotation = Quaternion.Euler(userSettings.defaultEulerAngles);
+    }
+
+    void Update()
+    {
+        Calculate();
+    }
 
     private void Calculate()
     {
@@ -70,7 +58,6 @@ public class CameraOffsetDrag : MonoBehaviour
         if ((IsLeftDragDown && !isRightDragInitiated) ||
             (IsRightDragDown && !isLeftDragInitiated))
         {
-            MousePositionOnDragStart = Input.mousePosition;
             totalDistance = default;
         }
 
@@ -84,6 +71,10 @@ public class CameraOffsetDrag : MonoBehaviour
         isDragEnabled = isAllDragInitiated || isCursorThresholdReached;
         isLeftDragEnabled = isDragEnabled && isLeftDragInitiated;
         isRightDragEnabled = isDragEnabled && isRightDragInitiated;
+        isFirstFrameRightDragEnabled = isRightDragEnabled && !isFirstFrameRightDragEnabled;
+        bool firstFrame = isFirstFrameRightDragEnabled;
+        isFirstFrameRightDragEnabled = false;
+
 
         if (!isDragEnabled)
         {
@@ -93,20 +84,18 @@ public class CameraOffsetDrag : MonoBehaviour
             return;
         }
 
-        Drag();
+        Drag(firstFrame);
     }
 
-    private void Drag()
+    private void Drag(bool firstFrame)
     {
-        // Debug.Log("Here ye");
-        // if (Input.GetMouseButtonDown(1))
-        // {
-        //     Quaternion turnAngle = Quaternion.Euler(0, target.eulerAngles.y, 0);
-        //     character.rotation = turnAngle;
+        if (firstFrame)
+        {
+            Quaternion turnAngle = Quaternion.Euler(0, target.eulerAngles.y, 0);
+            character.rotation = turnAngle;
 
-        //     target.localRotation = Quaternion.Euler(target.eulerAngles.x, 0, target.eulerAngles.z);
-        //     Debug.Log("Turned");
-        // }
+            target.localRotation = Quaternion.Euler(target.eulerAngles.x, 0, target.eulerAngles.z);
+        }
 
         if (isRightDragEnabled)
         {
