@@ -5,12 +5,12 @@ public class CameraOffsetDragControls : MonoBehaviour
 {
     public CameraOffsetDragSystemSettingsScriptableObject systemSettings;
 
-    public bool isDragEnabled;
+    public bool IsDragEnabled { get; private set; }
 
-    public bool isCursorThresholdReached;
+    public bool IsCursorThresholdReached { get; private set; }
 
-    public Vector3 totalDistance;
-    public Vector3 MousePosOnDragStart;
+    public Vector3 TotalDistance { get; private set; }
+    public Vector3 MousePosOnDragStart { get; private set; }
 
     public (bool, bool, bool) Calculate()
     {
@@ -27,43 +27,41 @@ public class CameraOffsetDragControls : MonoBehaviour
         if ((isLeftDragDown && !isRightDragInitiated) ||
             (isRightDragDown && !isLeftDragInitiated))
         {
-            totalDistance = default;
-            MousePosOnDragStart = Input.mousePosition;
+            TotalDistance = default;
 
         }
 
         if (isAnyDragInitiated)
         {
-            totalDistance += new Vector3(Mathf.Abs(Input.mousePositionDelta.x), Mathf.Abs(Input.mousePositionDelta.y), 0);
+            TotalDistance += new Vector3(Mathf.Abs(Input.mousePositionDelta.x), Mathf.Abs(Input.mousePositionDelta.y), 0);
         }
 
-        isCursorThresholdReached = isAnyDragInitiated && (totalDistance.x >= systemSettings.cursorHideThresholdOnDrag || totalDistance.y >= systemSettings.cursorHideThresholdOnDrag);
+        IsCursorThresholdReached = isAnyDragInitiated && (TotalDistance.x >= systemSettings.cursorHideThresholdOnDrag || TotalDistance.y >= systemSettings.cursorHideThresholdOnDrag);
 
-        bool isDragToBeSetToEnabled = isAllDragInitiated || isCursorThresholdReached;
+        bool isDragToBeSetToEnabled = isAllDragInitiated || IsCursorThresholdReached;
 
 
         if (isDragToBeSetToEnabled)
         {
-            isDragEnabled = true;
+            if (!IsDragEnabled)
+                MousePosOnDragStart = Input.mousePosition;
+
+            IsDragEnabled = true;
         }
 
         if (!Input.GetMouseButton(0) && !Input.GetMouseButton(1))
         {
-            isDragEnabled = false;
+            IsDragEnabled = false;
         }
 
-        if (isDragEnabled)
+        if (IsDragEnabled)
             Mouse.current.WarpCursorPosition(MousePosOnDragStart);
-        // if ((Input.GetMouseButtonUp(0) && !isDragEnabled) || (Input.GetMouseButtonUp(1) && !isDragEnabled))
-        // {
-        //     Mouse.current.WarpCursorPosition(MousePosOnDragStart);
-        // }
 
-        Cursor.visible = !isDragEnabled;
+        Cursor.visible = !IsDragEnabled;
 
-        bool isLeftDragEnabled = isDragEnabled && isLeftDragInitiated;
-        bool isRightDragEnabled = isDragEnabled && isRightDragInitiated;
-        return (isDragEnabled, isLeftDragEnabled, isRightDragEnabled);
+        bool isLeftDragEnabled = IsDragEnabled && isLeftDragInitiated;
+        bool isRightDragEnabled = IsDragEnabled && isRightDragInitiated;
+        return (IsDragEnabled, isLeftDragEnabled, isRightDragEnabled);
     }
 
 

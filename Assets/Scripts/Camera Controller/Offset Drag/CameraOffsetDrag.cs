@@ -11,19 +11,17 @@ public class CameraOffsetDrag : MonoBehaviour
     public CameraOffsetDragSystemSettingsScriptableObject systemSettings;
 
     public CameraOffsetDragControls controls;
-    public bool isFirstFrameRightDragEnabled;
-
+    public bool isFirstFrameRightDragEnabled { get; private set; }
 
     void Start()
     {
         target.rotation = Quaternion.Euler(userSettings.defaultEulerAngles);
     }
 
-    void Update()
+    void LateUpdate()
     {
         Calculate();
     }
-
 
     private void Calculate()
     {
@@ -65,26 +63,7 @@ public class CameraOffsetDrag : MonoBehaviour
         }
     }
 
-    private void DragY(Transform target, bool invert)
-    {
-        float mouseX = Input.GetAxis("Mouse X") * userSettings.sensitivities.x * Time.deltaTime;
-        mouseX = invert ? -mouseX : mouseX;
 
-        target.Rotate(Vector3.up * mouseX);
-    }
-
-    private void DragX(Transform target, bool invert)
-    {
-        float mouseY = Input.GetAxis("Mouse Y") * userSettings.sensitivities.y * Time.deltaTime;
-        mouseY = invert ? -mouseY : mouseY;
-
-        var ea = target.rotation.eulerAngles;
-
-        ea.x += mouseY;
-
-        ea.x = ClampAngle(ea.x, systemSettings.clamps.x, systemSettings.clamps.y);
-        target.eulerAngles = ea;
-    }
 
     private void Drag(Transform target, Vector2 sensitivities, string xAxis, string yAxis, bool invertXAxis, bool invertYAxis, CameraOffsetDragSystemSettingsScriptableObject.XRotationMethod xRotationMethod, Vector2 clamps)
     {
@@ -106,6 +85,28 @@ public class CameraOffsetDrag : MonoBehaviour
 
         ea.x = ClampAngle(ea.x, clamps.x, clamps.y);
         target.eulerAngles = ea;
+    }
+
+
+    private void DragX(Transform target, bool invert)
+    {
+        float mouseY = Input.GetAxis("Mouse Y") * userSettings.sensitivities.y * Time.deltaTime;
+        mouseY = invert ? -mouseY : mouseY;
+
+        var ea = target.rotation.eulerAngles;
+
+        ea.x += mouseY;
+
+        ea.x = ClampAngle(ea.x, systemSettings.clamps.x, systemSettings.clamps.y);
+        target.eulerAngles = ea;
+    }
+
+    private void DragY(Transform target, bool invert)
+    {
+        float mouseX = Input.GetAxis("Mouse X") * userSettings.sensitivities.x * Time.deltaTime;
+        mouseX = invert ? -mouseX : mouseX;
+
+        target.Rotate(Vector3.up * mouseX);
     }
 
     float ClampAngle(float angle, float from, float to)
