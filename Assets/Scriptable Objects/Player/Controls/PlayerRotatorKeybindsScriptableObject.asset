@@ -13,12 +13,20 @@ MonoBehaviour:
   m_Name: PlayerRotatorKeybindsScriptableObject
   m_EditorClassIdentifier: 
   leftTurnCombos:
-  - keyCodes: 61000000
-    mouseButtons: 
-  - keyCodes: 14010000
-    mouseButtons: 
+  - keyCodes:
+    - keyCode: 97
+      resolutionType: 2
+    mouseButtons: []
+  - keyCodes:
+    - keyCode: 276
+      resolutionType: 2
+    mouseButtons: []
   rightTurnCombos:
-  - keyCodes: 64000000
-    mouseButtons: 
-  - keyCodes: 13010000
-    mouseButtons: 
+  - keyCodes:
+    - keyCode: 100
+      resolutionType: 2
+    mouseButtons: []
+  - keyCodes:
+    - keyCode: 275
+      resolutionType: 2
+    mouseButtons: []

@@ -13,23 +13,41 @@ MonoBehaviour:
   m_Name: PlayerMotorKeybindsScriptableObject
   m_EditorClassIdentifier: 
   fowardCombos:
-  - keyCodes: 77000000
-    mouseButtons: 
-  - keyCodes: 
-    mouseButtons: 0000000001000000
-  - keyCodes: 11010000
-    mouseButtons: 
+  - keyCodes:
+    - keyCode: 119
+      resolutionType: 2
+    mouseButtons: []
+  - keyCodes:
+    - keyCode: 273
+      resolutionType: 2
+    mouseButtons: []
+  - keyCodes: []
+    mouseButtons:
+    - mouseButton: 0
+      resolutionType: 2
+    - mouseButton: 1
+      resolutionType: 2
   backwardCombos:
-  - keyCodes: 73000000
-    mouseButtons: 
-  - keyCodes: 12010000
-    mouseButtons: 
+  - keyCodes:
+    - keyCode: 115
+      resolutionType: 2
+    mouseButtons: []
+  - keyCodes:
+    - keyCode: 274
+      resolutionType: 2
+    mouseButtons: []
   leftCombos:
-  - keyCodes: 71000000
-    mouseButtons: 
+  - keyCodes:
+    - keyCode: 113
+      resolutionType: 2
+    mouseButtons: []
   rightCombos:
-  - keyCodes: 65000000
-    mouseButtons: 
+  - keyCodes:
+    - keyCode: 101
+      resolutionType: 2
+    mouseButtons: []
   jumpCombos:
-  - keyCodes: 20000000
-    mouseButtons: 
+  - keyCodes:
+    - keyCode: 32
+      resolutionType: 2
+    mouseButtons: []

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CameraOffsetDrag : MonoBehaviour
 {
@@ -8,7 +9,6 @@ public class CameraOffsetDrag : MonoBehaviour
 
     public CameraOffsetDragUserSettingsScriptableObject userSettings;
     public CameraOffsetDragSystemSettingsScriptableObject systemSettings;
-
 
     public bool isLeftDragDown;
     public bool isRightDragDown;
@@ -67,6 +67,8 @@ public class CameraOffsetDrag : MonoBehaviour
             (isRightDragDown && !isLeftDragInitiated))
         {
             totalDistance = default;
+            MousePosOnDragStart = Input.mousePosition;
+
         }
 
         if (isAnyDragInitiated)
@@ -84,16 +86,26 @@ public class CameraOffsetDrag : MonoBehaviour
             isDragEnabled = true;
         }
 
+
         if (!Input.GetMouseButton(0) && !Input.GetMouseButton(1))
         {
             isDragEnabled = false;
         }
+
+        if ((Input.GetMouseButtonUp(0) && !isDragEnabled) || (Input.GetMouseButtonUp(1) && !isDragEnabled))
+        {
+            Mouse.current.WarpCursorPosition(MousePosOnDragStart);
+        }
+
+        Cursor.visible = !isDragEnabled;
 
         isLeftDragEnabled = isDragEnabled && isLeftDragInitiated;
         isRightDragEnabled = isDragEnabled && isRightDragInitiated;
         isFirstFrameRightDragEnabled = isRightDragEnabled && !isFirstFrameRightDragEnabled;
 
     }
+
+    public Vector3 MousePosOnDragStart;
 
     private void Drag(bool firstFrame, bool isLeftDragEnabled, bool isRightDragEnabled)
     {
