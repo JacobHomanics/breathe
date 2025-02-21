@@ -1,4 +1,4 @@
-using System.Security.Cryptography;
+using System;
 using UnityEngine;
 
 public class CameraOffsetDrag : MonoBehaviour
@@ -21,29 +21,75 @@ public class CameraOffsetDrag : MonoBehaviour
 
     void Update()
     {
-        Calculate(target);
+        Calculate();
     }
 
-    public bool IsDragThresholdReached
+
+    private bool isLeftDragEnabled;
+    private bool isRightDragEnabled;
+
+    private bool isCursorDragCheckInitiated;
+
+    private bool isDragEnabled;
+
+    private int clickCount = 0;
+
+    private void Calculate()
     {
-        get
+        if (Input.GetMouseButtonDown(0))
+            isLeftDragEnabled = true;
+
+        if (Input.GetMouseButtonDown(1))
+            isRightDragEnabled = true;
+
+        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
         {
-            var posStartAbsX = Mathf.Abs(mouseStartPosOnDrag.x);
-            var posStartAbsY = Mathf.Abs(mouseStartPosOnDrag.y);
+            if (clickCount == 0)
+            {
+                mouseStartPosOnDrag = previousMousePositionDuringDrag = Input.mousePosition;
+            }
 
-            var prevPosAbsX = Mathf.Abs(previousMousePositionDuringDrag.x);
-            var prevPosAbsY = Mathf.Abs(previousMousePositionDuringDrag.y);
-
-            var diffX = Mathf.Abs(posStartAbsX - prevPosAbsX);
-            var diffY = Mathf.Abs(posStartAbsY - prevPosAbsY);
-
-
-            return diffX >= cursorHideThresholdOnDrag || diffY >= cursorHideThresholdOnDrag;
+            clickCount++;
+            isCursorDragCheckInitiated = true;
         }
-    }
-    private void Calculate(Transform target)
-    {
-        if (userSettings.leftMouseButtonCombo.IsResolved || userSettings.rightMouseButtonCombo.IsResolved)
+
+        if (Input.GetMouseButtonUp(0))
+            isLeftDragEnabled = false;
+
+        if (Input.GetMouseButtonUp(1))
+            isRightDragEnabled = false;
+
+        if (Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1))
+        {
+            clickCount--;
+            isCursorDragCheckInitiated = false;
+        }
+
+        bool isCursorThresholdReached = Vector3.Distance(mouseStartPosOnDrag, previousMousePositionDuringDrag) >= cursorHideThresholdOnDrag;
+        bool isDualClickActive = Input.GetMouseButton(0) && Input.GetMouseButton(1);
+
+        previousMousePositionDuringDrag = Input.mousePosition;
+        if (clickCount > 0)
+        {
+            if (isCursorThresholdReached)
+                isDragEnabled = true;
+        }
+
+        if (isDualClickActive)
+        {
+            isDragEnabled = true;
+        }
+
+        if (clickCount <= 0)
+        {
+            isDragEnabled = false;
+        }
+
+        Debug.Log(isDragEnabled);
+
+
+
+        if (isLeftDragEnabled || isRightDragEnabled)
         {
 
         }
@@ -51,11 +97,6 @@ public class CameraOffsetDrag : MonoBehaviour
         {
             if (motor.IsForwardActivated || motor.IsBackwardActivated)
                 LerpToDefaultEulerAngles(target);
-        }
-
-        if (userSettings.leftMouseButtonCombo.IsResolved)
-        {
-            Drag(target, userSettings.sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
         }
 
         if (Input.GetMouseButtonDown(1))
@@ -66,11 +107,16 @@ public class CameraOffsetDrag : MonoBehaviour
             target.localRotation = Quaternion.Euler(target.eulerAngles.x, 0, target.eulerAngles.z);
         }
 
-        if (userSettings.rightMouseButtonCombo.IsResolved)
+        if (isRightDragEnabled)
         {
             DragY(character, userSettings.invertXAxis);
             DragX(target, userSettings.invertYAxis);
         }
+        else if (isLeftDragEnabled)
+        {
+            Drag(target, userSettings.sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
+        }
+
     }
 
     private void DragY(Transform target, bool invert)
