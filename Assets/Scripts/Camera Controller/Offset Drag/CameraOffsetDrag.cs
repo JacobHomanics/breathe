@@ -23,6 +23,7 @@ public class CameraOffsetDrag : MonoBehaviour
         Calculate();
     }
 
+    public Vector3 offset;
     private void Calculate()
     {
         var result = controls.Calculate();
@@ -31,7 +32,22 @@ public class CameraOffsetDrag : MonoBehaviour
         bool firstFrame = isFirstFrameRightDragEnabled;
         isFirstFrameRightDragEnabled = false;
 
+        UpdateCenterPointPosition();
+
         Drag(result.Item1, result.Item2, result.Item3, firstFrame);
+    }
+
+    private void UpdateCenterPointPosition()
+    {
+        //Resets to character position as a base
+        target.position = character.position;
+
+        //Sets the x and z values to the offset amount based on the direction of the center point
+        target.position += target.TransformDirection(offset.x, 0, offset.z);
+        //Sets the y position to a flat offset position with no direction accounted for
+        //this is done so that the y stays the same regardless of the center point direction
+        target.position += new Vector3(0, offset.y, 0);
+
     }
 
     private void Drag(bool isDragEnabled, bool isLeftDragEnabled, bool isRightDragEnabled, bool firstFrame)
@@ -44,26 +60,17 @@ public class CameraOffsetDrag : MonoBehaviour
             return;
         }
 
-        if (firstFrame)
-        {
-            Quaternion turnAngle = Quaternion.Euler(0, target.eulerAngles.y, 0);
-            character.rotation = turnAngle;
-
-            target.localRotation = Quaternion.Euler(target.eulerAngles.x, 0, target.eulerAngles.z);
-        }
-
         if (isRightDragEnabled)
         {
-            DragY(character, userSettings.invertXAxis);
-            DragX(target, userSettings.invertYAxis);
+            Drag(target, userSettings.Sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
+            Quaternion turnAngle = Quaternion.Euler(0, target.eulerAngles.y, 0);
+            character.rotation = turnAngle;
         }
         else if (isLeftDragEnabled)
         {
             Drag(target, userSettings.Sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
         }
     }
-
-
 
     private void Drag(Transform target, Vector2 sensitivities, string xAxis, string yAxis, bool invertXAxis, bool invertYAxis, CameraOffsetDragSystemSettingsScriptableObject.XRotationMethod xRotationMethod, Vector2 clamps)
     {
@@ -87,34 +94,17 @@ public class CameraOffsetDrag : MonoBehaviour
         target.eulerAngles = ea;
     }
 
-
-    private void DragX(Transform target, bool invert)
-    {
-        float mouseY = Input.GetAxis("Mouse Y") * userSettings.Sensitivities.y * Time.deltaTime;
-        mouseY = invert ? -mouseY : mouseY;
-
-        var ea = target.rotation.eulerAngles;
-
-        ea.x += mouseY;
-
-        ea.x = ClampAngle(ea.x, systemSettings.clamps.x, systemSettings.clamps.y);
-        target.eulerAngles = ea;
-    }
-
-    private void DragY(Transform target, bool invert)
-    {
-        float mouseX = Input.GetAxis("Mouse X") * userSettings.Sensitivities.x * Time.deltaTime;
-        mouseX = invert ? -mouseX : mouseX;
-
-        target.Rotate(Vector3.up * mouseX);
-    }
-
     float ClampAngle(float angle, float from, float to)
     {
         // accepts e.g. -80, 80
         if (angle < 0f) angle = 360 + angle;
         if (angle > 180f) return Mathf.Max(angle, 360 + from);
         return Mathf.Min(angle, to);
+    }
+
+    public void LerpToDefaultEulerAngles()
+    {
+        LerpToDefaultEulerAngles(target);
     }
 
     public void LerpToDefaultEulerAngles(Transform target)

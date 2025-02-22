@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Zoom : CameraControllerComponent
 {
+    public Transform centerPoint;
+
     public ZoomUserSettingsScriptableObject userSettings;
     public ZoomSystemSettingsScriptableObject systemSettings;
 
@@ -14,7 +16,7 @@ public class Zoom : CameraControllerComponent
 
     public override Vector3 Calculate(Vector3 point)
     {
-        return point += new Vector3(0, 0, -HandleZoom());
+        return centerPoint.TransformPoint(new Vector3(0, 0, -HandleZoom()));
     }
 
     private float HandleZoom()

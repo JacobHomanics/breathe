@@ -12,15 +12,16 @@ public class CameraController : MonoBehaviour
 
     public CameraControllerComponent[] components;
 
+    private Vector3 desiredPosition;
+
     private void Calculate()
     {
-        Vector3 targetPosition = Vector3.zero;
-
         for (int i = 0; i < components.Length; i++)
         {
-            targetPosition = components[i].Calculate(targetPosition);
+            desiredPosition = components[i].Calculate(desiredPosition);
         }
 
-        cam.localPosition = Vector3.Lerp(cam.localPosition, targetPosition, Time.deltaTime * userSettings.smoothing);
+        Debug.DrawLine(cam.position, desiredPosition, Color.green);
+        cam.position = Vector3.Lerp(cam.position, desiredPosition, Time.deltaTime * userSettings.smoothing);
     }
 }
