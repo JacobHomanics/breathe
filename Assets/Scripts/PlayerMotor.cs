@@ -19,6 +19,13 @@ public class PlayerMotor : MonoBehaviour
 
     private Vector3 jumpVelocity;
 
+    public bool IsMoving
+    {
+        get
+        {
+            return IsForwardActivated || IsBackwardActivated || IsLeftActivated || IsRightActivated;
+        }
+    }
     public bool IsForwardActivated { get { return ForwardMotionTrueCount > BackwardMotionTrueCount; } }
     public bool IsBackwardActivated { get { return BackwardMotionTrueCount > ForwardMotionTrueCount; } }
     public bool IsLeftActivated { get { return LeftMotionTrueCount > RightMotionTrueCount; } }

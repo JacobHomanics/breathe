@@ -6,6 +6,7 @@ public class CameraOffsetDrag : MonoBehaviour
     public Transform target;
     public Transform character;
     public PlayerMotor motor;
+    public PlayerRotator rotator;
 
     public CameraOffsetDragUserSettingsScriptableObject userSettings;
     public CameraOffsetDragSystemSettingsScriptableObject systemSettings;
@@ -38,7 +39,7 @@ public class CameraOffsetDrag : MonoBehaviour
     {
         if (!isDragEnabled)
         {
-            if (motor.IsForwardActivated || motor.IsBackwardActivated)
+            if (motor.IsMoving || rotator.IsRotating)
                 LerpToDefaultEulerAngles(target);
 
             return;
@@ -123,7 +124,7 @@ public class CameraOffsetDrag : MonoBehaviour
 
         if (target.rotation.x != Quaternion.Euler(userSettings.defaultEulerAngles).x)
         {
-            targetEulers.x = userSettings.defaultEulerAngles.x;
+            // targetEulers.x = userSettings.defaultEulerAngles.x;
         }
 
         if (target.rotation.y != Quaternion.Euler(userSettings.defaultEulerAngles).y)
@@ -137,6 +138,8 @@ public class CameraOffsetDrag : MonoBehaviour
         }
 
         var targetRot = character.rotation * Quaternion.Euler(targetEulers);
+
+
 
         LerpToEulerAngles(target, targetRot, userSettings.defaultSpeed);
     }
