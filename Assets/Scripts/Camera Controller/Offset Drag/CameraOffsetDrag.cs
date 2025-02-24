@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class CameraOffsetDrag : MonoBehaviour
 {
@@ -12,12 +11,7 @@ public class CameraOffsetDrag : MonoBehaviour
     public CameraOffsetDragSystemSettingsScriptableObject systemSettings;
 
     public CameraOffsetDragControls controls;
-    public bool isFirstFrameRightDragEnabled { get; private set; }
-
-    void Start()
-    {
-        target.rotation = Quaternion.Euler(userSettings.defaultEulerAngles);
-    }
+    private bool isFirstFrameRightDragEnabled;
 
     void LateUpdate()
     {
