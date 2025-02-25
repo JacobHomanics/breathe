@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class CameraOffsetDragControls : MonoBehaviour
 {
-    public CameraOffsetDragSystemSettingsScriptableObject systemSettings;
+    public CameraOffsetDragUserSettingsScriptableObject userSettings;
 
     public bool IsDragEnabled { get; private set; }
 
@@ -36,7 +36,7 @@ public class CameraOffsetDragControls : MonoBehaviour
             TotalDistance += new Vector3(Mathf.Abs(Input.mousePositionDelta.x), Mathf.Abs(Input.mousePositionDelta.y), 0);
         }
 
-        IsCursorThresholdReached = isAnyDragInitiated && (TotalDistance.x >= systemSettings.cursorHideThresholdOnDrag || TotalDistance.y >= systemSettings.cursorHideThresholdOnDrag);
+        IsCursorThresholdReached = isAnyDragInitiated && (TotalDistance.x >= userSettings.cursorHideThresholdOnDrag || TotalDistance.y >= userSettings.cursorHideThresholdOnDrag);
 
         bool isDragToBeSetToEnabled = isAllDragInitiated || IsCursorThresholdReached;
 

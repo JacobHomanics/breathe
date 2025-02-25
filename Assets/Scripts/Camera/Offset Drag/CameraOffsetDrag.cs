@@ -56,16 +56,14 @@ public class CameraOffsetDrag : MonoBehaviour
         }
         else if (isLeftDragEnabled)
         {
-            Drag(pivot, userSettings.Sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
+            Drag(pivot, userSettings.Sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.clamps);
         }
 
         pivotRoot.SetPositionAndRotation(character.position, character.rotation);
 
     }
 
-
-
-    private void Drag(Transform target, Vector2 sensitivities, string xAxis, string yAxis, bool invertXAxis, bool invertYAxis, CameraOffsetDragSystemSettingsScriptableObject.XRotationMethod xRotationMethod, Vector2 clamps)
+    private void Drag(Transform target, Vector2 sensitivities, string xAxis, string yAxis, bool invertXAxis, bool invertYAxis, Vector2 clamps)
     {
         var x = Input.GetAxis(xAxis) * sensitivities.x * Time.deltaTime;
         var y = Input.GetAxis(yAxis) * sensitivities.y * Time.deltaTime;
@@ -75,14 +73,8 @@ public class CameraOffsetDrag : MonoBehaviour
 
         target.rotation = Quaternion.AngleAxis(xDelta, Vector3.up) * target.rotation;
 
-        if (xRotationMethod == CameraOffsetDragSystemSettingsScriptableObject.XRotationMethod.AngleAxis)
-            target.rotation = Quaternion.AngleAxis(yDelta, target.right) * target.rotation;
-
         var ea = target.rotation.eulerAngles;
-
-        if (xRotationMethod == CameraOffsetDragSystemSettingsScriptableObject.XRotationMethod.EulerAngles)
-            ea.x += yDelta;
-
+        ea.x += yDelta;
         ea.x = ClampAngle(ea.x, clamps.x, clamps.y);
         target.eulerAngles = ea;
     }
