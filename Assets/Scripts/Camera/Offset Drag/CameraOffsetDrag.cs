@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class CameraOffsetDrag : MonoBehaviour
 {
-    public Transform target;
+    public Transform pivotRoot;
+    public Transform pivot;
     public Transform character;
     public PlayerMotor motor;
     public PlayerRotator rotator;
@@ -31,31 +32,35 @@ public class CameraOffsetDrag : MonoBehaviour
 
     private void Drag(bool isDragEnabled, bool isLeftDragEnabled, bool isRightDragEnabled, bool firstFrame)
     {
+        pivotRoot.SetPositionAndRotation(character.position, character.rotation);
         if (!isDragEnabled)
         {
             if (motor.IsMoving || rotator.IsRotating)
-                LerpToDefaultEulerAngles(target);
+                LerpToDefaultEulerAngles(pivot);
 
             return;
         }
 
         if (firstFrame)
         {
-            Quaternion turnAngle = Quaternion.Euler(0, target.eulerAngles.y, 0);
+            Quaternion turnAngle = Quaternion.Euler(0, pivot.eulerAngles.y, 0);
             character.rotation = turnAngle;
 
-            target.localRotation = Quaternion.Euler(target.eulerAngles.x, 0, target.eulerAngles.z);
+            pivot.localRotation = Quaternion.Euler(pivot.eulerAngles.x, 0, pivot.eulerAngles.z);
         }
 
         if (isRightDragEnabled)
         {
             DragY(character, userSettings.invertXAxis);
-            DragX(target, userSettings.invertYAxis);
+            DragX(pivot, userSettings.invertYAxis);
         }
         else if (isLeftDragEnabled)
         {
-            Drag(target, userSettings.Sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
+            Drag(pivot, userSettings.Sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
         }
+
+        pivotRoot.SetPositionAndRotation(character.position, character.rotation);
+
     }
 
 
