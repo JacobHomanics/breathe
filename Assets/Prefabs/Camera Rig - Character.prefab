@@ -401,9 +401,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thirdPersonFollow: {fileID: 1075128085378693027}
-  sensitivity: 1
-  smoothTime: 0.1
-  invertAxis: 0
+  systemSettings: {fileID: 11400000, guid: 6d6cfffb622da4ecfaaf65d1472b7be9, type: 2}
+  userSettings: {fileID: 11400000, guid: ef72145c933e8497d9c0d045b7f78416, type: 2}
 --- !u!1 &7658498430548406106
 GameObject:
   m_ObjectHideFlags: 0

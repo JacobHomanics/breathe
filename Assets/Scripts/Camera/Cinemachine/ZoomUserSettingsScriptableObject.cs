@@ -6,8 +6,10 @@ public class ZoomUserSettingsScriptableObject : ScriptableObject
     public float zoom = 5f;
 
     public float maxZoom = 10f;
-    public float zoomSensitivity = 90f;
+    public float sensitivity = 4f;
     public string zoomAxis = "Mouse ScrollWheel";
 
-    public bool invertZoomAxis;
+    public bool invertAxis;
+
+    public float smoothTime;
 }

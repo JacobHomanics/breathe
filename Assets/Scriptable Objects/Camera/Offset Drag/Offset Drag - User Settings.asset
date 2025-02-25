@@ -20,3 +20,4 @@ MonoBehaviour:
   nonWebGlSensitivities: {x: 1000, y: 1000}
   defaultEulerAngles: {x: 35, y: 0, z: 0}
   defaultSpeed: 5
+  cursorHideThresholdOnDrag: 10
