@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Bob - User Settings
   m_EditorClassIdentifier: 
   periods: {x: 0, y: 0.5, z: 0}
-  amplitudes: {x: 0, y: 0.2, z: 0}
+  amplitudes: {x: 0, y: 0.1, z: 0}

@@ -1,10 +1,16 @@
 using UnityEngine;
 
-public class Bob : CameraControllerComponent
+public class Bob : MonoBehaviour
 {
     public BobUserSettingsScriptableObject userSettings;
+    public Transform pivot;
 
-    public override Vector3 Calculate(Vector3 position)
+    void Update()
+    {
+        pivot.position = Calculate(pivot.position);
+    }
+
+    private Vector3 Calculate(Vector3 position)
     {
         return HandleBob(position, userSettings.periods, userSettings.amplitudes);
     }
@@ -12,9 +18,9 @@ public class Bob : CameraControllerComponent
     private Vector3 HandleBob(Vector3 position, Vector3 periods, Vector3 amplitudes)
     {
         return new Vector3(
-            position.x + GetDistanceFromTheta(periods.x, amplitudes.x),
-            position.y + GetDistanceFromTheta(periods.y, amplitudes.y),
-            position.z + GetDistanceFromTheta(periods.z, amplitudes.z)
+            position.x + GetDistanceFromTheta(periods.x, amplitudes.x) * Time.deltaTime,
+            position.y + GetDistanceFromTheta(periods.y, amplitudes.y) * Time.deltaTime,
+            position.z + GetDistanceFromTheta(periods.z, amplitudes.z) * Time.deltaTime
         );
     }
 

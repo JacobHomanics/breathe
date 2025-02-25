@@ -1,22 +1,18 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class CameraOffsetDrag : MonoBehaviour
 {
-    public Transform target;
+    public Transform pivotRoot;
+    public Transform pivot;
     public Transform character;
     public PlayerMotor motor;
+    public PlayerRotator rotator;
 
     public CameraOffsetDragUserSettingsScriptableObject userSettings;
     public CameraOffsetDragSystemSettingsScriptableObject systemSettings;
 
     public CameraOffsetDragControls controls;
-    public bool isFirstFrameRightDragEnabled { get; private set; }
-
-    void Start()
-    {
-        target.rotation = Quaternion.Euler(userSettings.defaultEulerAngles);
-    }
+    private bool isFirstFrameRightDragEnabled;
 
     void LateUpdate()
     {
@@ -36,31 +32,35 @@ public class CameraOffsetDrag : MonoBehaviour
 
     private void Drag(bool isDragEnabled, bool isLeftDragEnabled, bool isRightDragEnabled, bool firstFrame)
     {
+        pivotRoot.SetPositionAndRotation(character.position, character.rotation);
         if (!isDragEnabled)
         {
-            if (motor.IsForwardActivated || motor.IsBackwardActivated)
-                LerpToDefaultEulerAngles(target);
+            if (motor.IsMoving || rotator.IsRotating)
+                LerpToDefaultEulerAngles(pivot);
 
             return;
         }
 
         if (firstFrame)
         {
-            Quaternion turnAngle = Quaternion.Euler(0, target.eulerAngles.y, 0);
+            Quaternion turnAngle = Quaternion.Euler(0, pivot.eulerAngles.y, 0);
             character.rotation = turnAngle;
 
-            target.localRotation = Quaternion.Euler(target.eulerAngles.x, 0, target.eulerAngles.z);
+            pivot.localRotation = Quaternion.Euler(pivot.eulerAngles.x, 0, pivot.eulerAngles.z);
         }
 
         if (isRightDragEnabled)
         {
             DragY(character, userSettings.invertXAxis);
-            DragX(target, userSettings.invertYAxis);
+            DragX(pivot, userSettings.invertYAxis);
         }
         else if (isLeftDragEnabled)
         {
-            Drag(target, userSettings.Sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
+            Drag(pivot, userSettings.Sensitivities, userSettings.xAxis, userSettings.yAxis, userSettings.invertXAxis, userSettings.invertYAxis, systemSettings.xRotationMethod, systemSettings.clamps);
         }
+
+        pivotRoot.SetPositionAndRotation(character.position, character.rotation);
+
     }
 
 
@@ -123,7 +123,7 @@ public class CameraOffsetDrag : MonoBehaviour
 
         if (target.rotation.x != Quaternion.Euler(userSettings.defaultEulerAngles).x)
         {
-            targetEulers.x = userSettings.defaultEulerAngles.x;
+            // targetEulers.x = userSettings.defaultEulerAngles.x;
         }
 
         if (target.rotation.y != Quaternion.Euler(userSettings.defaultEulerAngles).y)
@@ -137,6 +137,8 @@ public class CameraOffsetDrag : MonoBehaviour
         }
 
         var targetRot = character.rotation * Quaternion.Euler(targetEulers);
+
+
 
         LerpToEulerAngles(target, targetRot, userSettings.defaultSpeed);
     }

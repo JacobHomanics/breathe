@@ -10,6 +10,13 @@ public class PlayerRotator : MonoBehaviour
 
     public Events events = new();
 
+    public bool IsRotating
+    {
+        get
+        {
+            return RightMotionTrueCount > 0 || LeftMotionTrueCount > 0;
+        }
+    }
     public int RightMotionTrueCount { get { return Combo.GetResolveCount(keybinds.rightTurnCombos); } }
 
     public int LeftMotionTrueCount { get { return Combo.GetResolveCount(keybinds.leftTurnCombos); } }

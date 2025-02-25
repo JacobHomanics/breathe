@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Offset Drag - System Settings
   m_EditorClassIdentifier: 
   xRotationMethod: 0
-  clamps: {x: -80, y: 80}
+  clamps: {x: -90, y: 90}
   cursorHideThresholdOnDrag: 10
