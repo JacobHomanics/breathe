@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28cca6b8721354041bec30f20108079b, type: 3}
   m_Name: Bob - User Settings
   m_EditorClassIdentifier: 
-  periods: {x: 0, y: 0.5, z: 0}
-  amplitudes: {x: 0, y: 0.2, z: 0}
+  periods: {x: 0, y: 0.1, z: 0}
+  amplitudes: {x: 0, y: 0.0005, z: 0}
